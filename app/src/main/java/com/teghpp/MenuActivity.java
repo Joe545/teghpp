@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 
 public class MenuActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
     private static final String LOG_TAG = MenuActivity.class.getSimpleName() ;
 
     @Override

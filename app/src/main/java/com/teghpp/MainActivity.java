@@ -1,76 +1,119 @@
 package com.teghpp;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private EditText EditText3;
-    private EditText EditText4;
-    private Button button2;
-    private Button button;
+    FirebaseAuth mAuth;
+    EditText editTextEmail, editTextPassword;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this, "Firebase connection Success", Toast.LENGTH_LONG).show();
+
+        mAuth = FirebaseAuth.getInstance();
+
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+
+        findViewById(R.id.textViewSignup).setOnClickListener(this);
+        findViewById(R.id.buttonLogin).setOnClickListener(this);
+    }
 
 
+    public void next(View view) {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+        Toast.makeText(MainActivity.this, "You may enter the patients data", Toast.LENGTH_LONG).show();
+    }
+    private void userLogin() {
+        final String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
 
+        if (email.isEmpty()) {
+            editTextEmail.setError("Email is required");
+            editTextEmail.requestFocus();
+            return;
+        }
 
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
 
-        Log.d(LOG_TAG, "-------");
-        Log.d(LOG_TAG, "onCreate");
-        // Initialize all the view variables.
-        EditText3 = (EditText) findViewById(R.id.editText3);
-        EditText4 = (EditText) findViewById(R.id.editText4);
-        button = (Button) findViewById(R.id.button);
-        button2 = (Button) findViewById(R.id.button2);
+        if (password.isEmpty()) {
+            editTextPassword.setError("Password is required");
+            editTextPassword.requestFocus();
+            return;
+        }
 
-        // Restore the saved state. See onSaveInstanceState() for what gets saved.
-        if (savedInstanceState != null) {
-            boolean isVisible =
-                    savedInstanceState.getBoolean("reply_visible");
-            // Show both the header and the message views. If isVisible is
-            // false or missing from the bundle, use the default layout.
-            if (isVisible) {
+        if (password.length() < 6) {
+            editTextPassword.setError("Minimum lenght of password should be 6");
+            editTextPassword.requestFocus();
+            return;
+        }
 
-                EditText3.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
-                EditText4.setText(savedInstanceState.getString("reply_text"));
-                button.setVisibility(View.VISIBLE);
-                button.setVisibility(View.VISIBLE);
-                button2.setVisibility(View.VISIBLE);
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                progressBar.setVisibility(View.GONE);
+                if (task.isSuccessful()) {
+                    finish();
+                    Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() != null) {
+            finish();
+            startActivity(new Intent(this, MenuActivity.class));
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.textViewSignup:
+                finish();
+                startActivity(new Intent(this, Registro.class));
+                break;
 
-    /**
-     * Called when the user taps the Send button
-     */
-
-
-    public void launchRegistroActivity(View view) {
-        Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Registro.class);
-        startActivity(intent);
+            case R.id.buttonLogin:
+                userLogin();
+                break;
+        }
     }
 
-    public void launchMenuActivity(View view) {
-        Toast.makeText(this, "Entro al Menu Principal", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
-    }
 
 
 
