@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "151428961627",
+    "firebase_url": "https://teghpp1.firebaseio.com",
+    "project_id": "teghpp1",
+    "storage_bucket": "teghpp1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151428961627:android:f6b8074ad9467693",
+        "android_client_info": {
+          "package_name": "com.teghpp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151428961627-24nksb4kcbfjkpq453143der8gk9uigf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teghpp",
+            "certificate_hash": "eb4bd4ed96e6f1e18ee2d9abc2507c635d7b56ef"
+          }
+        },
+        {
+          "client_id": "151428961627-ack42m0rphf9oj1hrmd8hh3hesnnnnme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1PV8NoE8vomR_fB_Y_TGLHBRjoSNaxKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151428961627-ack42m0rphf9oj1hrmd8hh3hesnnnnme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

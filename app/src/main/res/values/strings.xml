@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="app_name">My Tesis</string>
+    <string name="registrar_usuario">Registar</string>
+    <string name="perdida">Perdida</string>
+    <string name="sensorio">Sensorio</string>
+    <string name="perfusion">Perfusión</string>
+    <string name="pulso">Pulso</string>
+    <string name="presion_arterial">Presion Arterial sistolica</string>
+    <string name="grados_de_choque">Grados de Choque</string>
+    <string name="tab_1">Perdida</string>
+    <string name="tab_2">Sensorio</string>
+    <string name="tab_3">Perfusión</string>
+    <string name="tab_label1">Perdida</string>
+    <string name="tab_label2">Sensorio</string>
+    <string name="tab_label3">Perfusión</string>
+    <string name="tab_label4">Pulso</string>
+    <string name="tab_label5">Grado</string>
+    <string name="tab_label6">presion</string>
+    <string name="tab_label01">FASE 1</string>
+    <string name="tab_label02">FASE 2</string>
+    <string name="tab_label03">FASE3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="diagnostico">Diagnostico de Choque Hipovolemico</string>
+    <string name="perdida_de_volumen">Perdida de Volumen (%)</string>
+    <string name="no">NO</string>
+    <string name="si">SI</string>
+    <string name="caso_a_evaluar">Caso a Evaluar</string>
+    <string name="perdidas_mayores">perdidas mayores al 35%</string>
+    <string name="ml_para_mujeres">ml para mujeres entre 50-70 kg</string>
+    <string name="mayores_a_2000_ml">Mayores a 2000 mL</string>
+    <string name="title_activity_codigo">CodigoActivity</string>
+    <string name="menor_70"><![CDATA[<70]]></string>
+    <string name="moderado_perfusion">Palidez, Frialdad,      mas sudoracion</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="OK">Aceptar</string>
+    <string name="pressed_ok">Se registro el usuario de manera exitosa</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="pressed_cancel">Pressed Cancel</string>
+    <string name="datos_validos">Los datos suministrados son validos:</string>
+    <string name="alerta">ALERTA</string>
+    <string name="grado_compensado">Grados de Choque: Compensado</string>
+    <string name="grado_moderado">Grados de Choque: Moderado</string>
+    <string name="recomendacion_compensado">Se recomienda seguir con metodos tradicionales</string>
+    <string name="paciente_choque">A continuacion podra medir el Grado de choque del Paciente</string>
+
+
+</resources>
