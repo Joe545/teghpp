@@ -10,8 +10,13 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class PerdidaActivity extends AppCompatActivity {
@@ -206,7 +211,28 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.show();   }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.menuLogout:
+
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, MainActivity.class));
+
+                break;
+        }
+        return true;
+    }
 
 
 }

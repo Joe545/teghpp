@@ -1,6 +1,7 @@
 package com.teghpp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,18 +10,24 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Hora extends AppCompatActivity {
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hora);
-
 
 
         // Create an instance of the tab layout from the view.
@@ -52,19 +59,16 @@ public class Hora extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
             }
+
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
     }
-
-
-
-
-
 
 
     public class PagerAdapter extends FragmentStatePagerAdapter {
@@ -97,42 +101,10 @@ public class Hora extends AppCompatActivity {
 
     }
 
-    public void onClickShowAviso(final View view) {
-        AlertDialog.Builder myAlertBuilder = new
-                AlertDialog.Builder(Hora.this);
-        // Set the dialog title.
-        myAlertBuilder.setTitle(R.string.grado_compensado);
-// Set the dialog message.
-        myAlertBuilder.setMessage(R.string.recomendacion_compensado);
 
-
-
-        // Add the buttons.
-        myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        myAlertBuilder.setNegativeButton(R.string.Cancel, new
-                DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // User cancelled the dialog.
-                        Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        // Create and show the AlertDialog.
-        myAlertBuilder.show();   }
-
-    @Override
-    public void onBackPressed() {
-
-
-
+    public void launchPatient(View view) {
+        Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Patientdata.class);
+        startActivity(intent);
     }
 }

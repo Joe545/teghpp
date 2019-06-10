@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.teghpp.Hora"></activity>
+        <activity android:name=".Patient"></activity>
+        <activity android:name=".Hora" />
         <activity
-            android:name="com.teghpp.PerdidaActivity"
-            android:parentActivityName="com.teghpp.MenuActivity"
+            android:name=".PerdidaActivity"
+            android:parentActivityName=".MenuActivity"
             android:screenOrientation="portrait">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -21,8 +22,8 @@
                 android:value="com.teghpp.MenuActivity" />
         </activity>
         <activity
-            android:name="com.teghpp.PresionActivity"
-            android:parentActivityName="com.teghpp.MenuActivity"
+            android:name=".Patientdata"
+            android:parentActivityName=".MenuActivity"
             android:screenOrientation="portrait">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -31,8 +32,8 @@
                 android:value="com.teghpp.MainActivity" />
         </activity>
         <activity
-            android:name="com.teghpp.MenuActivity"
-            android:parentActivityName="com.teghpp.MainActivity"
+            android:name=".MenuActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -41,7 +42,7 @@
                 android:value="com.teghpp.MainActivity" />
         </activity>
         <activity
-            android:name="com.teghpp.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,11 +51,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.teghpp.Registro"
-            android:parentActivityName="com.teghpp.MainActivity"
+            android:name=".Registro"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.teghpp.MainActivity" />
