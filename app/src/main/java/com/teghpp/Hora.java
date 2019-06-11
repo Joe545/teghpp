@@ -107,4 +107,11 @@ public class Hora extends AppCompatActivity {
         Intent intent = new Intent(this, Patientdata.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+
+
+
+    }
 }
