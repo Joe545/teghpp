@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,12 +30,12 @@ public class PerdidaActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 // Set the text for each tab.
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label5));
-
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label1));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label2));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label4));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label6));
+
 // Colocar scroll horinzontal en el tablayout para que se vean todas las opciones
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 // Set the tabs to fill the entire layout.
@@ -57,10 +58,12 @@ public class PerdidaActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
@@ -105,12 +108,19 @@ public class PerdidaActivity extends AppCompatActivity {
         }
     }
 
+
     public void launchCasoRojo(View view) {
         Toast.makeText(this, "Entro en Codigo Rojo", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Hora.class);
         startActivity(intent);
+        String messageToSend = "APURATE MANO";
+        String number = "4241959187";
+
+        SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+        Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
-//muestra alerta para entrar en codigo rojo
+
+    //muestra alerta para entrar en codigo rojo
     public void onClickShowAlert(final View view) {
         AlertDialog.Builder myAlertBuilder = new
                 AlertDialog.Builder(PerdidaActivity.this);
@@ -143,16 +153,15 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.show();
     }
     //muestra alerta avisando el grado compensado
+
+
     public void onClickShowAviso(final View view) {
         AlertDialog.Builder myAlertBuilder = new
                 AlertDialog.Builder(PerdidaActivity.this);
         // Set the dialog title.
         myAlertBuilder.setTitle(R.string.grado_compensado);
-// Set the dialog message.
+        // Set the dialog message.
         myAlertBuilder.setMessage(R.string.recomendacion_compensado);
-
-
-
         // Add the buttons.
         myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
@@ -160,7 +169,7 @@ public class PerdidaActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.pressed_ok,
                         Toast.LENGTH_SHORT).show();
 
-                }
+            }
         });
 
         myAlertBuilder.setNegativeButton(R.string.Cancel, new
@@ -173,9 +182,8 @@ public class PerdidaActivity extends AppCompatActivity {
                 });
 
         // Create and show the AlertDialog.
-        myAlertBuilder.show();   }
-
-
+        myAlertBuilder.show();
+    }
 
 
     public void onClickShowAviso2(final View view) {
@@ -183,9 +191,8 @@ public class PerdidaActivity extends AppCompatActivity {
                 AlertDialog.Builder(PerdidaActivity.this);
         // Set the dialog title.
         myAlertBuilder.setTitle(R.string.grado_moderado);
-// Set the dialog message.
+        // Set the dialog message.
         myAlertBuilder.setMessage(R.string.recomendacion_compensado);
-
 
 
         // Add the buttons.
@@ -208,9 +215,10 @@ public class PerdidaActivity extends AppCompatActivity {
                 });
 
         // Create and show the AlertDialog.
-        myAlertBuilder.show();   }
+        myAlertBuilder.show();
+    }
 
-
+    //menu de logout para la activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -219,10 +227,12 @@ public class PerdidaActivity extends AppCompatActivity {
         return true;
     }
 
+
+    //menu de logout para la activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menuLogout:
 
                 FirebaseAuth.getInstance().signOut();
