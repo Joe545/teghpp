@@ -45,6 +45,7 @@
     <string name="grado_moderado">Grados de Choque: Moderado</string>
     <string name="recomendacion_compensado">Se recomienda seguir con metodos tradicionales</string>
     <string name="paciente_choque">A continuacion podra medir el Grado de choque del Paciente</string>
+    <string name="name">Name</string>
 
 
 </resources>

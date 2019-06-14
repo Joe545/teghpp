@@ -1,8 +1,8 @@
 package com.teghpp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,8 @@ public class Patientdata extends AppCompatActivity {
     Member member;
     String name;
     int age,agea,weight,height,week;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +61,19 @@ public class Patientdata extends AppCompatActivity {
                 showToast(name);
                 showToast(String.valueOf(age));
                 Toast.makeText(Patientdata.this,"data inserted successfully",Toast.LENGTH_LONG).show();
+
+
             }
         });
     }
+
+
+    private void showToast(String text) {
+        Toast.makeText(Patientdata.this, text, Toast.LENGTH_SHORT).show();
+    }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,11 +98,14 @@ public class Patientdata extends AppCompatActivity {
         return true;
     }
 
-    private void showToast(String text) {
-        Toast.makeText(Patientdata.this, text, Toast.LENGTH_SHORT).show();
-    }
 
 }
+
+
+
+
+
+
 
 
 
