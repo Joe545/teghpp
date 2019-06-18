@@ -6,9 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -101,11 +99,8 @@ public class Caso3 extends Fragment {
             }
         });
 
-        Button button = (Button) getView().findViewById(R.id.btFrag3);
-        final TextView textView = (TextView) getView().findViewById(R.id.textViewFrag3);
 
-
-        button.setOnClickListener(new View.OnClickListener() {
+        /** button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 int count = 0;
                 for (int mGroupPosition = 0; mGroupPosition < listAdapter.getGroupCount(); mGroupPosition++) {
@@ -114,7 +109,7 @@ public class Caso3 extends Fragment {
                 textView.setText("" + count);
             }
         });
-
+         */
     }
 
     private void prepareListData() {
