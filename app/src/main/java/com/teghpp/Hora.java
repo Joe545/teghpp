@@ -25,11 +25,11 @@ public class Hora extends AppCompatActivity {
 
         // Create an instance of the tab layout from the view.
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
-// Set the text for each tab.
+        // Set the text for each tab.
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label01));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label02));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label03));
-// Set the tabs to fill the entire layout.
+        // Set the tabs to fill the entire layout.
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 // Use PagerAdapter to manage page views in fragments.
 
@@ -105,8 +105,6 @@ public class Hora extends AppCompatActivity {
 
     /**  @Override
     public void onBackPressed() {
-
-
 
     }*/
 }

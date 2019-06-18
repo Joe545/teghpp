@@ -34,12 +34,13 @@ public class PerdidaActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 // Set the text for each tab.
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label5));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label1));
+
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label2));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label4));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label6));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label5));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label1));
 
 // Colocar scroll horinzontal en el tablayout para que se vean todas las opciones
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
@@ -90,17 +91,17 @@ public class PerdidaActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new FragmentGrado();
-                case 1:
-                    return new FragmentPerdida();
-                case 2:
                     return new FragmentSensorio();
-                case 3:
+                case 1:
                     return new FragmentPerfusion();
-                case 4:
+                case 2:
                     return new FragmentPulso();
-                case 5:
+                case 3:
                     return new FragmentPresion();
+                case 4:
+                    return new FragmentGrado();
+                case 5:
+                    return new FragmentPerdida();
                 default:
                     return null;
             }
@@ -115,12 +116,13 @@ public class PerdidaActivity extends AppCompatActivity {
 
 
     public void launchCasoRojo(View view) {
-        Toast.makeText(this, "Entro en Codigo Rojo", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Entro en Código rojo", Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, Hora.class);
         startActivity(intent);
-        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia."; //
-        String number = "4241678931";
 
+        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        String number = "4241678931";
         SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
@@ -132,7 +134,7 @@ public class PerdidaActivity extends AppCompatActivity {
         // Set the dialog title.
         myAlertBuilder.setTitle("ALERTA");
 // Set the dialog message.
-        myAlertBuilder.setMessage("Esta por entrar en CODIGO ROJO. Los datos suministrados son validos:");
+        myAlertBuilder.setMessage("Está por entrar en CÓDIGO ROJO. ¿Los datos suministrados son válidos?");
 
         // Add the buttons.
         myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
@@ -171,8 +173,6 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -204,8 +204,7 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
+
 
             }
         });
@@ -249,7 +248,7 @@ public class PerdidaActivity extends AppCompatActivity {
         return true;
     }
 
-    private void checkSMSStatePermission() {
+    public void checkSMSStatePermission() {
         int permissionCheck = ContextCompat.checkSelfPermission(
                 this, Manifest.permission.SEND_SMS);
         if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
