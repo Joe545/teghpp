@@ -14,7 +14,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -121,9 +120,9 @@ public class PerdidaActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Hora.class);
         startActivity(intent);
 
-        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
-        String number = "4241678931";
-        SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+        //String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        //String number = "4241678931";
+        //SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
 

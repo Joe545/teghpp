@@ -24,7 +24,7 @@ public class Hora extends AppCompatActivity {
 
 
         // Create an instance of the tab layout from the view.
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         // Set the text for each tab.
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label01));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label02));
@@ -37,7 +37,7 @@ public class Hora extends AppCompatActivity {
         // Using PagerAdapter to manage page views in fragments.
 // Each page is represented by its own fragment.
 // This is another example of the adapter pattern.
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = findViewById(R.id.viewpager);
         final PagerAdapter adapter = new PagerAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -95,9 +95,9 @@ public class Hora extends AppCompatActivity {
     }
 
 
-    public void launchPatient(View view) {
+    public void Pruebalo(View view) {
         Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Patientdata.class);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
 
 
