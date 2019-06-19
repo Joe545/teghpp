@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(MainActivity.this, "Firebase connection Success", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Conexión con Firebase", Toast.LENGTH_LONG).show();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -43,32 +43,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void next(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
-        Toast.makeText(MainActivity.this, "You may enter the patients data", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Puede ingresar historia médica", Toast.LENGTH_LONG).show();
     }
     private void userLogin() {
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         if (email.isEmpty()) {
-            editTextEmail.setError("Email is required");
+            editTextEmail.setError("Ingrese correo");
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.setError("Ingrese dirección de correo válida");
             editTextEmail.requestFocus();
             return;
         }
 
         if (password.isEmpty()) {
-            editTextPassword.setError("Password is required");
+            editTextPassword.setError("Ingrese contraseña");
             editTextPassword.requestFocus();
             return;
         }
 
         if (password.length() < 6) {
-            editTextPassword.setError("Minimum lenght of password should be 6");
+            editTextPassword.setError("La contraseña debe tener al menos 6 caracteres");
             editTextPassword.requestFocus();
             return;
         }

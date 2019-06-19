@@ -40,7 +40,7 @@
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email"
+                android:hint="Correo electrónico"
                 android:inputType="textEmailAddress"
                 android:paddingBottom="15dp"
                 />
@@ -49,7 +49,7 @@
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="password"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp"
                 />
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
-                android:text="Login"
+                android:text="Iniciar Sesión"
                 android:textAllCaps="false"
                 />
 
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Don't have account? Sign Up"
+                android:text="No tienes cuenta? Regístrate"
                 android:textAlignment="center"
                 />
 
