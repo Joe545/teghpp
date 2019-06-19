@@ -78,6 +78,14 @@ public class PerdidaActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * public void jumpToPage(View view) {
+     * <p>
+     * // viewPager.setCurrentItem(viewPager.getPosition() + 1, true);
+     * <p>
+     * }
+     */
+
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int mNumOfTabs;
 
@@ -158,68 +166,7 @@ public class PerdidaActivity extends AppCompatActivity {
         // Create and show the AlertDialog.
         myAlertBuilder.show();
     }
-    //muestra alerta avisando el grado compensado
 
-
-    public void onClickShowAviso(final View view) {
-        AlertDialog.Builder myAlertBuilder = new
-                AlertDialog.Builder(PerdidaActivity.this);
-        // Set the dialog title.
-        myAlertBuilder.setTitle(R.string.grado_compensado);
-        // Set the dialog message.
-        myAlertBuilder.setMessage(R.string.recomendacion_compensado);
-        // Add the buttons.
-        myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // User clicked OK button.
-
-            }
-        });
-
-        myAlertBuilder.setNegativeButton(R.string.Cancel, new
-                DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // User cancelled the dialog.
-                        Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        // Create and show the AlertDialog.
-        myAlertBuilder.show();
-    }
-
-
-    public void onClickShowAviso2(final View view) {
-        AlertDialog.Builder myAlertBuilder = new
-                AlertDialog.Builder(PerdidaActivity.this);
-        // Set the dialog title.
-        myAlertBuilder.setTitle(R.string.grado_moderado);
-        // Set the dialog message.
-        myAlertBuilder.setMessage(R.string.recomendacion_compensado);
-
-
-        // Add the buttons.
-        myAlertBuilder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // User clicked OK button.
-
-
-            }
-        });
-
-        myAlertBuilder.setNegativeButton(R.string.Cancel, new
-                DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // User cancelled the dialog.
-                        Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        // Create and show the AlertDialog.
-        myAlertBuilder.show();
-    }
 
     //menu de logout para la activity
     @Override
