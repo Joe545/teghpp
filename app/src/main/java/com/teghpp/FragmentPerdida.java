@@ -24,7 +24,7 @@ public class FragmentPerdida extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_uno, container, false);
+        return inflater.inflate(R.layout.frag_perdida, container, false);
     }
 
 }

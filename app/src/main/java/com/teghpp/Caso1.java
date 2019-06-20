@@ -1,7 +1,6 @@
 package com.teghpp;
 
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,6 +20,7 @@ public class Caso1 extends Fragment {
     ExpandableListView expListView;
     ArrayList<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -45,6 +45,16 @@ public class Caso1 extends Fragment {
         expListView.setAdapter(listAdapter);
 
         // Listview Group click listener
+        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v,
+                                        int groupPosition, long id) {
+
+                return false;
+            }
+        });
+
         expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
 
             @Override

@@ -21,7 +21,7 @@ public class FragmentSensorio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag_dos, container, false);
+        return inflater.inflate(R.layout.frag_sensorio, container, false);
     }
 
 }
