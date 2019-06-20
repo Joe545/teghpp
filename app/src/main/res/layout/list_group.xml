@@ -39,6 +39,7 @@
             android:layout_marginBottom="8dp"
             android:focusable="false"
             android:text=""
+            android:buttonTint="@color/rojo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,3 +49,4 @@
 
 
 </LinearLayout>
+

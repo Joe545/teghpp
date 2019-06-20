@@ -25,11 +25,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class PerdidaActivity extends AppCompatActivity {
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perdida);
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 // Set the text for each tab.
@@ -78,13 +81,6 @@ public class PerdidaActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * public void jumpToPage(View view) {
-     * <p>
-     * // viewPager.setCurrentItem(viewPager.getPosition() + 1, true);
-     * <p>
-     * }
-     */
 
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int mNumOfTabs;

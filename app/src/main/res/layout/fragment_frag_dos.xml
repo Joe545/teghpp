@@ -52,12 +52,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
+            android:onClick="selectTab"
             android:layout_columnWeight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@android:color/holo_green_light"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
             <TextView
@@ -91,7 +92,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
             <TextView
@@ -125,7 +126,7 @@
             android:layout_marginBottom="16dp"
             android:onClick="onClickShowAlert"
             app:cardBackgroundColor="@android:color/holo_red_dark"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
             <TextView
