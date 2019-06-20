@@ -124,6 +124,7 @@ public class PerdidaActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Hora.class);
         startActivity(intent);
 
+
         //String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
         //String number = "4241678931";
         //SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
@@ -146,6 +147,7 @@ public class PerdidaActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.pressed_ok,
                         Toast.LENGTH_SHORT).show();
                 launchCasoRojo(view);
+
 
             }
         });

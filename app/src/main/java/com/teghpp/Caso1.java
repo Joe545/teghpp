@@ -131,6 +131,7 @@ public class Caso1 extends Fragment {
         List<String> masaje = new ArrayList<>();
         masaje.add("Grado de choque SEVERO: se entro en codigo Rojo");
         masaje.add("Asigne Roles");
+
         //4
         List<String> via1 = new ArrayList<String>();
         via1.add("Administracion de soluciones. (500 cc sol 0.9% / Ringer Lactato - evaluar-)");

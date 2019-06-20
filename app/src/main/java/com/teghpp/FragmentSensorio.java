@@ -24,4 +24,5 @@ public class FragmentSensorio extends Fragment {
         return inflater.inflate(R.layout.frag_sensorio, container, false);
     }
 
+
 }

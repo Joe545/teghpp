@@ -61,6 +61,14 @@
             app:cardCornerRadius="60dp"
             app:cardElevation="8dp">
 
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="nextFrag"
+                android:visibility="invisible"
+                style="" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
