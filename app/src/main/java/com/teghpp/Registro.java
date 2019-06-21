@@ -138,7 +138,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         switch (view.getId()) {
             case R.id.buttonSignUp:
                 registerUser();
-                startActivity(new Intent(this, MainActivity.class));
+
                 break;
 
             case R.id.textViewLogin:

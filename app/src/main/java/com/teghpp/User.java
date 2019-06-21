@@ -6,7 +6,7 @@ public class User {
     public User() {
     }
 
-    public User(String group, String email, String phone) {
+    public User(String email, String group, String phone) {
         this.email = email;
         this.group = group;
         this.phone = phone;
