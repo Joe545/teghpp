@@ -25,11 +25,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class PerdidaActivity extends AppCompatActivity {
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perdida);
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 // Set the text for each tab.
@@ -76,15 +79,9 @@ public class PerdidaActivity extends AppCompatActivity {
         });
 
 
+
     }
 
-    /**
-     * public void jumpToPage(View view) {
-     * <p>
-     * // viewPager.setCurrentItem(viewPager.getPosition() + 1, true);
-     * <p>
-     * }
-     */
 
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int mNumOfTabs;
@@ -128,6 +125,7 @@ public class PerdidaActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Hora.class);
         startActivity(intent);
 
+
         //String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
         //String number = "4241678931";
         //SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
@@ -147,9 +145,11 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
+
+
                 launchCasoRojo(view);
+
+
 
             }
         });

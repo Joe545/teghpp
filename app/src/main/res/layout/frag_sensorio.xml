@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.teghpp.FragmentPerfusion"
-    tools:layout_editor_absoluteY="25dp">
+    android:id="@+id/frag_sensorio"
+    tools:context="com.teghpp.FragmentSensorio">
 
     <TextView
         android:id="@+id/textView5"
@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="@string/pulso"
+        android:text="@string/sensorio"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
@@ -58,15 +58,23 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@android:color/holo_green_light"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
+
+            <Button
+                android:id="@+id/btnext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="nextPager"
+                android:visibility="invisible"
+                style="" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="60-90"
+                android:text="Normal"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/black"
@@ -92,7 +100,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
             <TextView
@@ -100,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="91-120"
+                android:text="Agitada"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/black"
@@ -117,6 +125,7 @@
 
         <!-- 5 -->
         <android.support.v7.widget.CardView
+
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -126,22 +135,36 @@
             android:layout_marginBottom="16dp"
             android:onClick="onClickShowAlert"
             app:cardBackgroundColor="@android:color/holo_red_dark"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
                 android:gravity="center"
-                android:text="> 120"
+                android:text="Letargica o"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Inconsciente"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="100dp"
@@ -156,3 +179,4 @@
 
 
 </android.support.constraint.ConstraintLayout>
+

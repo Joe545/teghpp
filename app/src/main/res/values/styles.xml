@@ -17,5 +17,9 @@
         <item name="android:windowBackground">@drawable/background</item>
     </style>
 
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.AppCompat.Button.Colored">
+
+    </style>
+
 </resources>
 
