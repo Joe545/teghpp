@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -7,14 +8,32 @@
     android:backgroundTint="@color/rojo"
     android:background="#f4f4f4">
 
+    <Button
+        android:id="@+id/btCronometro"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:height="1dp"
+        android:backgroundTint="@color/rojo"
+        android:text="PIDA AYUDA"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ExpandableListView
         android:id="@+id/lvExp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_width="match_parent"
-        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:layout_weight="1"
         android:divider="@color/rojo"
         android:dividerHeight="1dp"
-        android:layout_weight="1" />
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCronometro" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

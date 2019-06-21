@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
@@ -20,14 +22,15 @@ public class Caso1 extends Fragment {
     ExpandableListView expListView;
     ArrayList<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-
-
+    Chronometer crono;
+    Button startButton;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.fragment_caso1, container, false);
+
     }
 
     @Override
@@ -104,7 +107,7 @@ public class Caso1 extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("PIDA AYUDA:");
+        listDataHeader.add("Grado de choque SEVERO: se entro en codigo Rojo");
         listDataHeader.add("Verifique estado de conciencia");
         listDataHeader.add("Administre Oxigeno");
         listDataHeader.add("Masaje uterino permanente");
@@ -119,7 +122,6 @@ public class Caso1 extends Fragment {
         // Adding child data
         //0
         List<String> ayuda = new ArrayList<>();
-        ayuda.add("Grado de choque SEVERO: se entro en codigo Rojo");
         ayuda.add("Asigne Roles");
         //1
         List<String> conciencia = new ArrayList<>();
@@ -176,6 +178,8 @@ public class Caso1 extends Fragment {
 
 
     }
+
+
 }
 
 

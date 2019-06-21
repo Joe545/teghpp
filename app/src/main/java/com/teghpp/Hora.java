@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Hora extends AppCompatActivity {
     FirebaseAuth mAuth;
-
+    private Chronometer crono;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,8 @@ public class Hora extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+
     }
 
 
@@ -111,6 +114,7 @@ public class Hora extends AppCompatActivity {
 
 
     }
+
 
     /**  @Override
     public void onBackPressed() {
