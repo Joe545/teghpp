@@ -75,8 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
-                android:text="Sign Up"
-                android:backgroundTint="@color/rojo"
+                android:text="Registrarse"
                 android:textAllCaps="false"
                 />
 
