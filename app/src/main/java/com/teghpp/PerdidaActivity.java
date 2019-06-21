@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,7 +24,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class PerdidaActivity extends AppCompatActivity {
+public class PerdidaActivity extends FragmentActivity {
     private ViewPager viewPager;
 
     @Override
@@ -144,9 +144,11 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
+
+
+                iniciarCronometro();
                 launchCasoRojo(view);
+
 
 
             }
@@ -165,6 +167,12 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.show();
     }
 
+    private void iniciarCronometro() {
+
+
+        Intent service = new Intent(this, Hora.class);
+        startService(service);
+    }
 
     //menu de logout para la activity
     @Override
