@@ -75,7 +75,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@android:color/holo_green_light"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
@@ -130,7 +130,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/yellow"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
@@ -186,7 +186,7 @@
             android:layout_marginBottom="16dp"
             android:onClick="onClickShowAlert"
             app:cardBackgroundColor="@android:color/holo_red_dark"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
