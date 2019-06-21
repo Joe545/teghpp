@@ -108,8 +108,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
                             User user = new User(
                                     email,
-                                    phone,
-                                    group
+                                    group,
+                                    phone
                             );
 
                             FirebaseDatabase.getInstance().getReference("Users")

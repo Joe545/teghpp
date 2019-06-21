@@ -60,7 +60,7 @@ public class Patientdata extends AppCompatActivity {
                 reff.push().setValue(member);
                 showToast(name);
                 showToast(String.valueOf(age));
-                Toast.makeText(Patientdata.this,"data inserted successfully",Toast.LENGTH_LONG).show();
+                Toast.makeText(Patientdata.this,"información insertada correctamente",Toast.LENGTH_LONG).show();
 
 
             }

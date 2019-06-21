@@ -7,8 +7,8 @@ public class User {
     }
 
     public User(String group, String email, String phone) {
-        this.group = group;
         this.email = email;
+        this.group = group;
         this.phone = phone;
     }
 }
