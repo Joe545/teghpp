@@ -23,6 +23,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private FirebaseAuth mAuth;
 
+    //comentario
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,43 +56,43 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         final String group = editTextGroup.getText().toString().trim();
 
         if (email.isEmpty()) {
-            editTextEmail.setError("Email is required");
+            editTextEmail.setError("Ingrese correo");
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Please enter a valid email");
+            editTextEmail.setError("Ingrese dirección de correo válida");
             editTextEmail.requestFocus();
             return;
         }
 
         if (password.isEmpty()) {
-            editTextPassword.setError("Password is required");
+            editTextPassword.setError("Ingrese contraseña");
             editTextPassword.requestFocus();
             return;
         }
 
         if (password.length() < 6) {
-            editTextPassword.setError("Minimum lenght of password should be 6");
+            editTextPassword.setError("La contraseña debe tener al menos 6 caracteres");
             editTextPassword.requestFocus();
             return;
         }
 
         if (phone.isEmpty()) {
-            editTextPhone.setError("Phone is required");
+            editTextPhone.setError("Ingrese teléfono");
             editTextPhone.requestFocus();
             return;
         }
 
         if (group.isEmpty()) {
-            editTextGroup.setError("Group is required");
+            editTextGroup.setError("Ingrese grupo de guardia");
             editTextGroup.requestFocus();
             return;
         }
 
         if (phone.length() != 10) {
-            editTextPhone.setError("Invalid Phone");
+            editTextPhone.setError("Teléfono inválido");
             editTextPhone.requestFocus();
             return;
         }
@@ -107,8 +108,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
                             User user = new User(
                                     email,
-                                    phone,
-                                    group
+                                    group,
+                                    phone
                             );
 
                             FirebaseDatabase.getInstance().getReference("Users")
@@ -118,7 +119,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                                 public void onComplete(@NonNull Task<Void> task) {
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Registro.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(Registro.this, "Registro Satisfactorio", Toast.LENGTH_LONG).show();
                                     } else {
                                         //display a failure message
                                     }
