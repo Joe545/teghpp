@@ -143,7 +143,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.textViewLogin:
                 finish();
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, Login.class));
                 break;
         }
     }

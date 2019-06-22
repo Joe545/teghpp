@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
+    android:background="@color/rojo"
     tools:context="com.teghpp.MenuActivity"
     >
 
@@ -68,7 +69,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="40dp"
                     android:onClick="launchPerdidaActivity"
                     >
 
@@ -96,7 +97,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="40dp"
                     android:onClick="launchPerdidaActivity"
                     >
 
@@ -124,7 +125,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="40dp"
                     android:onClick="launchPerdidaActivity">
 
                         <TextView
@@ -151,7 +152,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="40dp"
                     android:onClick="launchPerdidaActivity">
 
                         <TextView
