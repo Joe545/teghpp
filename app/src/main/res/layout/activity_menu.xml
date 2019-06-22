@@ -7,10 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:orientation="vertical"
     android:background="@color/rojo"
-    tools:context="com.teghpp.MenuActivity"
-    >
+    android:orientation="vertical"
+    tools:context="com.teghpp.MenuActivity">
 
 
         <TextView
@@ -23,6 +22,7 @@
             android:layout_marginEnd="66dp"
             android:layout_marginBottom="16dp"
             android:gravity="center"
+            android:textColor="@color/blanco"
             android:text="TABLA DE BASKET"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -31,27 +31,30 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="225dp"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="86dp"
             android:layout_marginTop="53dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="54dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="-28dp"
             android:gravity="bottom"
             android:text="@string/paciente_choque"
             android:textAlignment="center"
+            android:textColor="@color/blanco"
             android:textSize="18sp" />
 
         <GridLayout
-            android:layout_marginTop="100dp"
-            android:columnCount="2"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
             android:padding="14dp"
-            >
+            android:rowCount="3">
 
                 <!-- 1 -->
 
@@ -63,27 +66,30 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
-                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#1D1D1D"
+                    android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    app:cardElevation="8dp"
-                    app:cardCornerRadius="40dp"
+                    android:layout_marginBottom="16dp"
                     android:onClick="launchPerdidaActivity"
-                    >
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="8dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
+                            android:layout_height="116dp"
                             android:gravity="center"
                             android:text="@string/sensorio"
                             android:textColor="#FFFFFF"
                             android:textSize="30sp" />
+
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:src="@drawable/brain"
+                            android:tint="@color/blanco"
+                            android:layout_marginTop="20dp"
                             android:layout_gravity="center" />
                 </android.support.v7.widget.CardView>
 
@@ -91,83 +97,93 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
-                    android:layout_marginBottom="16dp"
+                    android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    app:cardElevation="8dp"
-                    app:cardCornerRadius="40dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#8A8888"
                     android:onClick="launchPerdidaActivity"
-                    >
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="8dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimary"
+                            android:layout_height="116dp"
                             android:gravity="center"
                             android:text="@string/perfusion"
                             android:textColor="#FFFFFF"
                             android:textSize="30sp" />
+
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:src="@drawable/nail"
+                            android:layout_marginTop="20dp"
+                            android:tint="@color/blanco" />
                 </android.support.v7.widget.CardView>
 
                 <!-- 5 -->
                 <android.support.v7.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
-                    android:layout_marginBottom="16dp"
+                    android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    app:cardElevation="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="launchPerdidaActivity"
                     app:cardCornerRadius="40dp"
-                    android:onClick="launchPerdidaActivity">
+                    app:cardElevation="8dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryDark"
+                            android:layout_height="90dp"
+                            android:background="@color/blanco"
                             android:gravity="center"
                             android:text="@string/pulso"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="30sp" />
+
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_gravity="center" />
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/pulse" />
                 </android.support.v7.widget.CardView>
 
                 <!-- 6 -->
                 <android.support.v7.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_columnWeight="1"
+                    android:backgroundTint="#343834"
                     android:layout_rowWeight="1"
-                    android:layout_marginBottom="16dp"
+                    android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    app:cardElevation="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="launchPerdidaActivity"
                     app:cardCornerRadius="40dp"
-                    android:onClick="launchPerdidaActivity">
+                    app:cardElevation="8dp">
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryDark"
+                            android:layout_height="116dp"
                             android:gravity="center"
                             android:text="@string/presion_arterial"
                             android:textColor="#FFFFFF"
                             android:textSize="30sp" />
+
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
                             android:layout_gravity="center"
-                           /> android:src="@drawable/reading_book"/>
+                            android:src="@drawable/pressure"
+                            android:tint="@color/blanco" />
+
                 </android.support.v7.widget.CardView>
 
 

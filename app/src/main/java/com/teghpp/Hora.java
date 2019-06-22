@@ -98,13 +98,7 @@ public class Hora extends AppCompatActivity {
     }
 
 
-    public void Pruebalo(View view) {
-        Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
 
-
-    }
 
 
     public void launchPatient(View view) {

@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
+                android:textColor="@color/blanco"
                 android:text="Iniciar Sesión"
                 android:backgroundTint="@color/rojo"
                 android:textAllCaps="false"

@@ -6,7 +6,8 @@
     <string name="sensorio">Sensorio</string>
     <string name="perfusion">Perfusión</string>
     <string name="pulso">Pulso</string>
-    <string name="presion_arterial">Presion Arterial sistolica</string>
+    <string name="presion_arterial">Presion Arterial </string>
+    <string name="presion_arterial1">Presion Arterial sistolica \n (mm/Hg)</string>
     <string name="grados_de_choque">Grados de Choque</string>
     <string name="tab_1">Perdida</string>
     <string name="tab_2">Sensorio</string>
@@ -33,7 +34,7 @@
     <string name="mayores_a_2000_ml">Mayores a 2000 mL</string>
     <string name="title_activity_codigo">CodigoActivity</string>
     <string name="menor_70"><![CDATA[<70]]></string>
-    <string name="moderado_perfusion">Palidez, Frialdad,      mas sudoracion</string>
+    <string name="moderado_perfusion">Palidez \n Frialdad \n mas sudoracion</string>
     <string name="aceptar">Aceptar</string>
     <string name="OK">Aceptar</string>
     <string name="pressed_ok">Se registro el usuario de manera exitosa</string>
@@ -44,8 +45,10 @@
     <string name="grado_compensado">Grados de Choque: Compensado</string>
     <string name="grado_moderado">Grados de Choque: Moderado</string>
     <string name="recomendacion_compensado">Se recomienda seguir con metodos tradicionales</string>
-    <string name="paciente_choque">A continuacion podra medir el Grado de choque del Paciente</string>
+    <string name="paciente_choque">Diagnóstico de choque</string>
     <string name="name">Nombre</string>
+    <string name="lista1">Utero: \n PIDE AYUDA  \n Asigne roles \n Masaje uterino permanente</string>
+    <string name="perfusion_caso_rojo"><![CDATA[Palidez \n Frialdad \n Sudoracion \n Llenado capilar > 3 seg]]></string>
 
 
 </resources>

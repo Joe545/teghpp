@@ -119,7 +119,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void onBackPressed() {
         Toast.makeText(this, "entre en Perdida", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Registro.class);
         startActivity(intent);
     }
 

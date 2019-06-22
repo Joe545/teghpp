@@ -14,6 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,13 +25,15 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class PerdidaActivity extends AppCompatActivity {
+public class PerdidaActivity extends AppCompatActivity implements View.OnClickListener {
     private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perdida);
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
 
@@ -41,11 +44,10 @@ public class PerdidaActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label4));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label6));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label5));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label1));
+
 
 // Colocar scroll horinzontal en el tablayout para que se vean todas las opciones
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
 // Set the tabs to fill the entire layout.
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
 // Use PagerAdapter to manage page views in fragments.
@@ -102,10 +104,7 @@ public class PerdidaActivity extends AppCompatActivity {
                     return new FragmentPulso();
                 case 3:
                     return new FragmentPresion();
-                case 4:
-                    return new FragmentGrado();
-                case 5:
-                    return new FragmentPerdida();
+
                 default:
                     return null;
             }
@@ -126,9 +125,9 @@ public class PerdidaActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-        //String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
-        //String number = "4241678931";
-        //SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        String number = "4241678931";
+        SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
 
@@ -192,6 +191,52 @@ public class PerdidaActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btAmarillo1:
+                finish();
+                startActivity(new Intent(this, GradoModerado.class));
+                break;
+
+            case R.id.btAmarillo2:
+                finish();
+                finish();
+                startActivity(new Intent(this, GradoModerado.class));
+                break;
+
+            case R.id.btAmarillo3:
+                finish();
+                startActivity(new Intent(this, GradoModerado.class));
+                break;
+
+            case R.id.btAmarillo4:
+                finish();
+                startActivity(new Intent(this, GradoModerado.class));
+                break;
+
+            case R.id.btVerde1:
+                finish();
+                startActivity(new Intent(this, GradoCompesado.class));
+                break;
+
+            case R.id.btVerde2:
+                finish();
+                startActivity(new Intent(this, GradoCompesado.class));
+                break;
+
+            case R.id.btVerde3:
+                finish();
+                startActivity(new Intent(this, GradoCompesado.class));
+                break;
+
+            case R.id.btVerde4:
+                finish();
+                startActivity(new Intent(this, GradoCompesado.class));
+                break;
+        }
     }
 
     public void checkSMSStatePermission() {

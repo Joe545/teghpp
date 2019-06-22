@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frag_perfusion"
+    android:background="#8A8888"
     tools:context="com.teghpp.FragmentPerfusion"
     tools:layout_editor_absoluteY="25dp">
 
@@ -16,6 +17,7 @@
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:text="@string/perfusion"
+            android:textColor="@color/blanco"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
@@ -51,7 +53,7 @@
 
                 <!-- 1 -->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/bt1"
+                    android:id="@+id/btVerde4"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
@@ -86,6 +88,7 @@
 
                 <!-- 3 -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/btAmarillo4"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
@@ -128,7 +131,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     android:onClick="onClickShowAlert"
-                    app:cardBackgroundColor="@android:color/holo_red_dark"
+                    app:cardBackgroundColor="@color/rojo"
                     app:cardCornerRadius="40dp"
                     app:cardElevation="8dp">
 
@@ -139,7 +142,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:lines="@integer/google_play_services_version"
-                        android:text="Palidez, Frialdad, Sudoracion, Llenado capilar > 3 seg"
+                        android:text="@string/perfusion_caso_rojo"
                         android:textAlignment="gravity"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/blanco"

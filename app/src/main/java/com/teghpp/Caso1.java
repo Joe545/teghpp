@@ -122,7 +122,11 @@ public class Caso1 extends Fragment {
         // Adding child data
         //0
         List<String> ayuda = new ArrayList<>();
-        ayuda.add("Asigne Roles");
+
+        ayuda.add("Cabeza");
+        ayuda.add("Brazo 1");
+        ayuda.add("Brazo 2");
+        ayuda.add(getString(R.string.lista1));
         //1
         List<String> conciencia = new ArrayList<>();
         conciencia.add("texto de informacion para este caso");
