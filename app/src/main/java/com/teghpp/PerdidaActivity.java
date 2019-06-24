@@ -26,7 +26,15 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class PerdidaActivity extends AppCompatActivity implements View.OnClickListener {
+    private TabLayout tabLayout;
     private ViewPager viewPager;
+    private int[] tabIcons = {
+            R.drawable.brain,
+            R.drawable.nail,
+            R.drawable.pulse,
+            R.drawable.pressure,
+
+    };
 
 
     @Override
@@ -37,19 +45,23 @@ public class PerdidaActivity extends AppCompatActivity implements View.OnClickLi
 
         viewPager = (ViewPager) findViewById(R.id.pager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 // Set the text for each tab.
 
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label2));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label4));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label6));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.brain));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.nail));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.pulse));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.pressure));
+
 
 
 // Colocar scroll horinzontal en el tablayout para que se vean todas las opciones
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
 // Set the tabs to fill the entire layout.
-        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        //cambiar color en tablayout
+        tabLayout.setTabIconTintResource(R.color.blanco);
+        //cambiar el tamano de los iconos
 // Use PagerAdapter to manage page views in fragments.
 
 // Each page is represented by its own fragment.
@@ -249,4 +261,6 @@ public class PerdidaActivity extends AppCompatActivity implements View.OnClickLi
             Log.i("Mensaje", "Se tiene permiso para enviar SMS!");
         }
     }
+
+
 }

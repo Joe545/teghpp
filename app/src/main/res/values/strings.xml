@@ -23,7 +23,6 @@
     <string name="tab_label03">FASE3</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="diagnostico">Diagnostico de Choque Hipovolemico</string>
     <string name="perdida_de_volumen">Perdida de Volumen (%)</string>
     <string name="no">NO</string>

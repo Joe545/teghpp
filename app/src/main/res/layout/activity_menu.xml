@@ -23,7 +23,7 @@
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:textColor="@color/blanco"
-            android:text="TABLA DE BASKET"
+            android:text="TABLA DE BASKETT"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="30sp"
