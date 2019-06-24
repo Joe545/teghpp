@@ -53,8 +53,17 @@ public class MenuActivity extends AppCompatActivity {
         return true;
     }
 
+    private static final int INTERVALO = 2000; //2 segundos para salir
+    private long tiempoPrimerClick;
+
     @Override
     public void onBackPressed() {
-
+        if (tiempoPrimerClick + INTERVALO > System.currentTimeMillis()) {
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(this, "Vuelve a presionar para salir", Toast.LENGTH_SHORT).show();
+        }
+        tiempoPrimerClick = System.currentTimeMillis();
     }
 }

@@ -40,12 +40,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    public void next(View view) {
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
-        Toast.makeText(Login.this, "Puede ingresar historia médica", Toast.LENGTH_LONG).show();
-    }
-
     private void userLogin() {
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();

@@ -13,15 +13,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".GradoModerado"></activity>
         <activity android:name=".GradoCompesado" />
-        <activity android:name=".MainActivity" />
         <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name=".MainActivity"
+            android:parentActivityName=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+
+
         </activity>
         <activity
             android:name=".Hora"
@@ -41,6 +49,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Registro"
+            android:label="Registrar nuevo usuario"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
 
@@ -49,11 +58,8 @@
             android:name=".Login"
             android:parentActivityName=".SplashActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

@@ -48,6 +48,7 @@
     <string name="name">Nombre</string>
     <string name="lista1">Utero: \n PIDE AYUDA  \n Asigne roles \n Masaje uterino permanente</string>
     <string name="perfusion_caso_rojo"><![CDATA[Palidez \n Frialdad \n Sudoracion \n Llenado capilar > 3 seg]]></string>
+    <string name="bienvenida">Esta aplicación es un sistema destinado al aprendizaje basado en simulación para el manejo de hemorragia obstétrica. No debe utilizarse durante emergencias médicas.</string>
 
 
 </resources>

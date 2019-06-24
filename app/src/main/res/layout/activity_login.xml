@@ -3,20 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
     tools:context=".Login">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="85dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
-
-    </RelativeLayout>
 
 
     <RelativeLayout
@@ -38,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="email"
+                android:textColorHighlight="@color/blanco"
                 android:inputType="textEmailAddress"
                 android:paddingBottom="15dp" />
 
@@ -45,7 +36,7 @@
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="password"
+                android:hint="contraseña"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp" />
 
@@ -67,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Don't have account? Sign Up"
+                android:text="No tiene una cuenta? Registese"
                 android:textAlignment="center" />
 
 
