@@ -123,11 +123,11 @@ public class Caso3 extends Fragment {
 
         // Adding child data
         List<String> histerectomia = new ArrayList<String>();
-        histerectomia.add("texto de informacion para este caso texto de informacion para este caso texto de informacion para este caso texto de informacion para este caso texto de informacion para este caso texto de informacion para este caso");
+        histerectomia.add(getString(R.string.list_caso3));
 
 
         List<String> cirugia = new ArrayList<String>();
-        cirugia.add("texto de informacion para este caso");
+        cirugia.add(getString(R.string.list_caso3_1));
 
 
         listDataChild.put(listDataHeader.get(0), histerectomia); // Header, Child data

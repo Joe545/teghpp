@@ -23,13 +23,14 @@ public class Caso1 extends Fragment {
     ArrayList<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     Chronometer crono;
-    Button startButton;
+    Button button;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.fragment_caso1, container, false);
+
 
     }
 
@@ -117,56 +118,68 @@ public class Caso1 extends Fragment {
         listDataHeader.add("VALORAR INDICE DE CHOQUE");
         listDataHeader.add("Evalue las 4T");
         listDataHeader.add("Cuantificar diuresis y temperatura corporal ");
-
-
         // Adding child data
-        //0
+        //0- Grado de Choque severo
         List<String> ayuda = new ArrayList<>();
+        ayuda.add(getString(R.string.lista0_1));
+        ayuda.add(getString(R.string.lista0_2));
+        ayuda.add(getString(R.string.lista0_3));
+        ayuda.add(getString(R.string.lista0_4));
+        ayuda.add(getString(R.string.lista0_5));
 
-        ayuda.add("Cabeza");
-        ayuda.add("Brazo 1");
-        ayuda.add("Brazo 2");
-        ayuda.add(getString(R.string.lista1));
-        //1
+
+        //1- Verifique estado de conciencia
         List<String> conciencia = new ArrayList<>();
-        conciencia.add("texto de informacion para este caso");
-        //2
-        List<String> oxigeno = new ArrayList<>();
-        oxigeno.add("texto de informacion para este caso");
-        //3
-        List<String> masaje = new ArrayList<>();
-        masaje.add("Grado de choque SEVERO: se entro en codigo Rojo");
-        masaje.add("Asigne Roles");
+        conciencia.add(getString(R.string.lista1_1));
+        conciencia.add(getString(R.string.lista1_2));
+        conciencia.add(getString(R.string.lista1_3));
 
-        //4
+        //2- Administre Oxigeno
+        List<String> oxigeno = new ArrayList<>();
+        oxigeno.add(getString(R.string.list2_1));
+        oxigeno.add(getString(R.string.list2_2));
+        oxigeno.add(getString(R.string.list2_3));
+
+        //3- Masaje Utrino permanente
+        List<String> masaje = new ArrayList<>();
+
+        //4- Via endovenosa 1
         List<String> via1 = new ArrayList<String>();
-        via1.add("Administracion de soluciones. (500 cc sol 0.9% / Ringer Lactato - evaluar-)");
-        //5
+        via1.add(getString(R.string.lista4_1));
+        via1.add(getString(R.string.lista4_2));
+
+        //5- Via endovenosa 2
         List<String> via2 = new ArrayList<String>();
-        via2.add("Transfundir dos Uds CG o (Rh-) o isogrupo");
-        via2.add("Hemoglobina");
-        via2.add("Hematocrito");
-        via2.add("Tiempo de coagulacion");
-        via2.add("Tipiaje");
-        //6
+        via2.add(getString(R.string.lista5_1));
+        via2.add(getString(R.string.lista5_2));
+        via2.add(getString(R.string.lista5_3));
+        //via2.add("Hemoglobina");
+        //via2.add("Hematocrito");
+        //via2.add("Tiempo de coagulacion");
+        //via2.add("Tipiaje");
+
+        //6- tratamiento farmacologico
         List<String> tratamiento = new ArrayList<String>();
-        tratamiento.add("Oxitocina: 20 UI en 500 cc Sol 0.9% a 20 gts/min (Macrogotero)");
-        tratamiento.add("Metilergonovina: 0.2% mg IM x 2 dosis (cada 20 min). Maximo cinco dosis en 24 horas");
-        tratamiento.add("Misoprosol: 800 mcg VO / SL / VR");
-        tratamiento.add("Acido Tranexamico: 1 gr VEV stat");
-        //7
+        tratamiento.add(getString(R.string.lista6_1));
+        tratamiento.add(getString(R.string.lista6_2));
+        tratamiento.add(getString(R.string.lista6_3));
+        tratamiento.add(getString(R.string.lista6_4));
+
+        //7- Valorar indice de choque
         List<String> indice = new ArrayList<String>();
         indice.add(" ( FC/PAS  > 1)");
-        //8
+
+        //8- evalue las 4 T
         List<String> evalue = new ArrayList<String>();
-        evalue.add("texto de informacion para este caso");
-        evalue.add("TONO: 70%: Masaje uterino y farmacos.");
-        evalue.add("TRAUMA: 20%: Sutura de desgarros.");
-        evalue.add("TEJIDO: 9%: Remocion de restos.");
-        evalue.add("TROMBINA: 1%: PFC y/o crioprecipitado");
-        //9
+        evalue.add(getString(R.string.lista8_1));
+        evalue.add(getString(R.string.lista8_2));
+        evalue.add(getString(R.string.lista8_3));
+        evalue.add(getString(R.string.lista8_4));
+
+
+        //9- cuantificar diuresis
         List<String> diuresis = new ArrayList<String>();
-        diuresis.add("texto de informacion para este caso");
+        //diuresis.add("texto de informacion para este caso");
 
 
         listDataChild.put(listDataHeader.get(0), ayuda); // Header, Child data

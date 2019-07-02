@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GradoModerado"></activity>
+        <activity android:name=".GradoModerado">
+
+        </activity>
         <activity android:name=".GradoCompesado" />
         <activity
             android:name=".MainActivity"
@@ -27,25 +29,29 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
-
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:name=".Hora"
+            android:label="HORA DORADA"
             android:parentActivityName=".PerdidaActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".PerdidaActivity"
+            android:label="Evaluacion del paciente"
             android:parentActivityName=".MenuActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Patientdata"
+            android:label="Informacion del Paciente"
             android:parentActivityName=".Hora"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".MenuActivity"
+            android:label="TABLA DE BASKETT"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Registro"
@@ -56,11 +62,10 @@
 
         <activity
             android:name=".Login"
-            android:parentActivityName=".SplashActivity"
+            android:parentActivityName=".Registro"
             android:screenOrientation="portrait">
-
-
         </activity>
+
     </application>
 
 </manifest>

@@ -62,7 +62,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     app:cardBackgroundColor="@android:color/holo_green_light"
-                    app:cardCornerRadius="40dp"
+                    app:cardCornerRadius="80dp"
                     app:cardElevation="8dp">
 
                         <TextView
@@ -74,7 +74,7 @@
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textColor="@android:color/black"
-                            android:textSize="30sp"
+                            android:textSize="25sp"
                             android:textStyle="bold" />
 
 
@@ -97,7 +97,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     app:cardBackgroundColor="@color/yellow"
-                    app:cardCornerRadius="40dp"
+                    app:cardCornerRadius="80dp"
                     app:cardElevation="8dp">
 
                         <TextView
@@ -109,7 +109,7 @@
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textColor="@android:color/black"
-                            android:textSize="30sp"
+                            android:textSize="25sp"
                             android:textStyle="bold" />
 
 
@@ -132,7 +132,7 @@
                     android:layout_marginBottom="16dp"
                     android:onClick="onClickShowAlert"
                     app:cardBackgroundColor="@color/rojo"
-                    app:cardCornerRadius="40dp"
+                    app:cardCornerRadius="80dp"
                     app:cardElevation="8dp">
 
 
@@ -141,12 +141,11 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:lines="@integer/google_play_services_version"
                         android:text="@string/perfusion_caso_rojo"
                         android:textAlignment="gravity"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/blanco"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
 

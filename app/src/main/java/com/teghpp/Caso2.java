@@ -62,9 +62,7 @@ public class Caso2 extends Fragment {
             @Override
             public void onGroupExpand(int groupPosition) {
                 Toast.makeText(getActivity().getApplicationContext(), String.valueOf(groupPosition), Toast.LENGTH_SHORT).show();
-                /** Toast.makeText(getApplicationContext(),
-                 listDataHeader.get(groupPosition) + " Expanded",
-                 Toast.LENGTH_SHORT).show();*/
+
             }
         });
 
@@ -113,15 +111,22 @@ public class Caso2 extends Fragment {
 
 
         // Adding child data
-        List<String> taponamiento = new ArrayList<String>();
-        taponamiento.add("Balon de Bakri");
-        taponamiento.add("Balon de artesanal ");
-
         List<String> tann = new ArrayList<String>();
-        tann.add("texto de informacion para este caso");
+        tann.add(getString(R.string.list_tann));
+        tann.add(getString(R.string.list_tann1));
+        tann.add(getString(R.string.list_tann2));
+        tann.add(getString(R.string.list_tann3));
+
+
+        List<String> taponamiento = new ArrayList<String>();
+        taponamiento.add(getString(R.string.list_bakri));
+        taponamiento.add(getString(R.string.list_artesanal));
+
+
 
         List<String> sutura = new ArrayList<String>();
-        sutura.add("texto de informacion para este caso");
+        sutura.add(getString(R.string.list_sutura1));
+        sutura.add(getString(R.string.liat_sutura2));
 
 
         listDataChild.put(listDataHeader.get(0), tann); // Header, Child data

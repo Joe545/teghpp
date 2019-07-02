@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,48 +13,41 @@
 
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="278dp"
-            android:layout_height="49dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="67dp"
-            android:layout_marginEnd="66dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:textColor="@color/blanco"
-            android:text="TABLA DE BASKETT"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/textView2"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="86dp"
-            android:layout_marginTop="53dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="-28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:gravity="bottom"
             android:text="@string/paciente_choque"
             android:textAlignment="center"
             android:textColor="@color/blanco"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
+
+    <GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="395dp"
+        android:layout_height="536dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
             android:padding="14dp"
-            android:rowCount="3">
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
                 <!-- 1 -->
 
@@ -67,11 +60,11 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
-                    android:backgroundTint="#1D1D1D"
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
+                    android:backgroundTint="#1D1D1D"
                     android:onClick="launchPerdidaActivity"
                     app:cardCornerRadius="40dp"
                     app:cardElevation="8dp">
@@ -87,10 +80,10 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/brain"
-                            android:tint="@color/blanco"
+                            android:layout_gravity="center"
                             android:layout_marginTop="20dp"
-                            android:layout_gravity="center" />
+                            android:src="@drawable/brain"
+                            android:tint="@color/blanco" />
                 </android.support.v7.widget.CardView>
 
                 <!-- 4 -->
@@ -119,8 +112,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/nail"
                             android:layout_marginTop="20dp"
+                            android:src="@drawable/nail"
                             android:tint="@color/blanco" />
                 </android.support.v7.widget.CardView>
 
@@ -149,8 +142,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_marginTop="20dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
                             android:src="@drawable/pulse" />
                 </android.support.v7.widget.CardView>
 
@@ -158,12 +151,12 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:backgroundTint="#343834"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
+                    android:backgroundTint="#343834"
                     android:onClick="launchPerdidaActivity"
                     app:cardCornerRadius="40dp"
                     app:cardElevation="8dp">
@@ -179,8 +172,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_marginTop="20dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
                             android:src="@drawable/pressure"
                             android:tint="@color/blanco" />
 
@@ -190,4 +183,4 @@
         </GridLayout>
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

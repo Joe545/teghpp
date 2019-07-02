@@ -46,9 +46,64 @@
     <string name="recomendacion_compensado">Se recomienda seguir con metodos tradicionales</string>
     <string name="paciente_choque">Diagnóstico de choque</string>
     <string name="name">Nombre</string>
-    <string name="lista1">Utero: \n PIDE AYUDA  \n Asigne roles \n Masaje uterino permanente</string>
+
     <string name="perfusion_caso_rojo"><![CDATA[Palidez \n Frialdad \n Sudoracion \n Llenado capilar > 3 seg]]></string>
     <string name="bienvenida">Esta aplicación es un sistema destinado al aprendizaje basado en simulación para el manejo de hemorragia obstétrica. No debe utilizarse durante emergencias médicas.</string>
+    <string name="letargica_o_inconsciente">Letargica o \n Inconsciente</string>
+
+    <string name="lista0_1"><b>• Utero:</b> \n\n\t\t\t\t\t\t\t\t - PIDE AYUDA  \n\t\t\t\t\t\t\t\t  - Asigne roles \n\t\t\t\t\t\t\t\t - Masaje uterino permanente</string>
+    <string name="lista0_2"><b>• Ayudante brazo 1:</b> \n\n\t\t\t\t\t\t\t\t - médico o enfermera</string>
+    <string name="lista0_3"><b>• Ayudante brazo 2:</b> \n\n\t\t\t\t\t\t\t\t - médico o enfermera</string>
+    <string name="lista0_4"><b>• Cabeza: </b> \n\n\t\t\t\t\t\t\t\t - médico o anestesiólogo</string>
+    <string name="lista0_5"><b>• Circulante:</b> \n\n\t\t\t\t\t\t\t\t - Lista de Chequeo</string>
+
+    <string name="lista1_1">• Consciente orientado</string>
+    <string name="lista1_2">• Obnubilada desorientado</string>
+    <string name="lista1_3">• Inconsciente</string>
+
+    <string name="list2_1">• Oxigeno húmedo a 10l por minuto por mascara con reservorio</string>
+    <string name="list2_2">• Sin reservorio</string>
+    <string name="list2_3">• Bigote nasal</string>
+
+    <string name="lista4_1">• Administrar 500cc a chorro y reevaluar</string>
+    <string name="lista4_2">• Aumentar según grado de choque</string>
+
+    <string name="lista5_1">• Transfundir dos Uds CG O (Rh-)</string>
+    <string name="lista5_2">• En su defecto O (Rh+) </string>
+    <string name="lista5_3">• Isogrupo</string>
+
+    <string name="lista6_1">• Oxitocina:\n 20 UI en 500 cc Sol 0.9% a 20 gts/min (Macrogotero)</string>
+    <string name="lista6_2">• Metilergonovina:\n0.2% mg IM x 2 dosis (cada 20 min). Maximo cinco dosis en 24 horas</string>
+    <string name="lista6_3">• Misoprosol:\n800 mcg VO / SL / VR</string>
+    <string name="lista6_4">• Acido Tranexamico:\n1 gr VEV stat</string>
+
+    <string name="lista8_1">• TONO: \n70%: Masaje uterino y farmacos.</string>
+    <string name="lista8_2">• TRAUMA: \n20%: Sutura de desgarros.</string>
+    <string name="lista8_3">• TEJIDO: \n9%: Remocion de restos.</string>
+    <string name="lista8_4">• TROMBINA: \n1%: PFC y/o crioprecipitado</string>
+
+    <string name="list_tann"><b>• Criterios de aplicacion:</b> \n\n\t\t\t\t\t\t\t\t- Índice de choque > 0.9 \n\n\t\t\t\t\t\t\t\t-Inestabilidad hemodinámica \n\n\t\t\t\t\t\t\t\t-Sangrado > 20 minutos</string>
+    <string name="list_tann1"><b>• Colocación: </b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento 5</string>
+    <string name="list_tann2"><b>• Criterios de retiro:</b>\n\n- Si la presión arterial baja 20mm/hg o el pulso aumenta en 20 latidos/minuto después de retirar un segmento cerrar nuevamente todos los segmentos aumentar la tasa de fluidos y buscar el origen del sangrado</string>
+    <string name="list_tann3"><b>• Retiro:</b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento \n\n\t\t\t\t\t\t\t\t- Esperar 15 minutos por segmento</string>
+    <string name="list_bakri">• Balon de Bakri: \n\n\t\t\t\t\t\t\t\t- Volumen 500cc \n\n\t\t\t\t\t\t\t\t- Usar llave de tres vías</string>
+    <string name="list_artesanal">• Balon de artesanal: \n\n\t\t\t\t\t\t\t\t- Condón \n\n\t\t\t\t\t\t\t\t- Sonda de Foley \n\n\t\t\t\t\t\t\t\t- Nelaton 18/20/22</string>
+    <string name="list_sutura1">• Catgut crómico 2</string>
+    <string name="liat_sutura2">• Vicryl 0 ó 1</string>
+
+
+    <string name="list_caso3">• Subtotal, conservación de anexos</string>
+    <string name="list_caso3_1">• A criterios del médico</string>
+    <string name="pida_ayuda">PIDA AYUDA</string>
+    <string name="registrate">Registrate</string>
+    <string name="compensado">Compensado</string>
+    <string name="seguir_evaluando_al_paciente">Seguir evaluando al paciente</string>
+    <string name="moderado">Moderado</string>
+    <string name="_60_90">60-90</string>
+    <string name="_91_120">91-120</string>
+    <string name="_120"><![CDATA[> 120]]></string>
+    <string name="_90"><![CDATA[> 90]]></string>
+    <string name="_80_90">80-90</string>
 
 
 </resources>
