@@ -34,7 +34,7 @@ public class Patientdata extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
-
+//hola
         txtName=(EditText)findViewById(R.id.txtName);
         txtAge=(EditText)findViewById(R.id.txtAge);
         txtHt=(EditText) findViewById(R.id.txtHt);
