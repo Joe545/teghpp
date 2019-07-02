@@ -24,9 +24,10 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class PerdidaActivity extends AppCompatActivity implements View.OnClickListener {
+public class PerdidaActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
     private int[] tabIcons = {
             R.drawable.brain,
             R.drawable.nail,
@@ -187,6 +188,21 @@ public class PerdidaActivity extends AppCompatActivity implements View.OnClickLi
         return true;
     }
 
+    /**
+     * public void nextFragment (View view) {
+     * Toast.makeText(this, "Paso al siguiente caso a Evaluar", Toast.LENGTH_SHORT).show();
+     * <p>
+     * viewPager.setCurrentItem(getItem(+1), true);
+     * <p>
+     * <p>
+     * <p>
+     * }
+     */
+
+    private int getItem(int i) {
+        return viewPager.getCurrentItem() + i;
+    }
+
 
     //menu de logout para la activity
     @Override
@@ -205,22 +221,19 @@ public class PerdidaActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    public void onClick(View view) {
+    public void nextFragment(View view) {
         switch (view.getId()) {
             case R.id.btAmarillo1:
-                finish();
-                startActivity(new Intent(this, GradoModerado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
+
                 break;
 
             case R.id.btAmarillo2:
-                finish();
-                finish();
-                startActivity(new Intent(this, GradoModerado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
                 break;
 
             case R.id.btAmarillo3:
-                finish();
-                startActivity(new Intent(this, GradoModerado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
                 break;
 
             case R.id.btAmarillo4:
@@ -229,18 +242,15 @@ public class PerdidaActivity extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.btVerde1:
-                finish();
-                startActivity(new Intent(this, GradoCompesado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
                 break;
 
             case R.id.btVerde2:
-                finish();
-                startActivity(new Intent(this, GradoCompesado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
                 break;
 
             case R.id.btVerde3:
-                finish();
-                startActivity(new Intent(this, GradoCompesado.class));
+                viewPager.setCurrentItem(getItem(+1), true);
                 break;
 
             case R.id.btVerde4:

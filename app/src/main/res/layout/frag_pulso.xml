@@ -50,7 +50,8 @@
 
         <!-- 1 -->
         <android.support.v7.widget.CardView
-            android:id="@+id/btVerde2"
+            android:id="@+id/btVerde3"
+            android:onClick="nextFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -62,12 +63,7 @@
             app:cardCornerRadius="80dp"
             app:cardElevation="8dp">
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="invisible"
-                style="" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +88,8 @@
 
         <!-- 3 -->
         <android.support.v7.widget.CardView
-            android:id="@+id/btAmarillo2"
+            android:id="@+id/btAmarillo3"
+            android:onClick="nextFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_rowWeight="1"

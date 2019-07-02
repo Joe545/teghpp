@@ -1,55 +1,53 @@
 package com.teghpp;
 
 public class Member {
-    private String Name;
-    private Integer Age;
+    private String Iniciales;
+    private Integer Edad;
     private Integer Time;
-    private Integer Height;
-    private Integer Weight;
-    private Integer Weeks;
+    private Integer PesoMama;
+    private Integer Semanas;
+    private Integer FcEnt;
+    private Integer FcSal;
+    private Integer PaEnt;
+    private Integer PaSal;
+    private Integer PesoBebe;
+    private Integer Talla;
+    private Integer Gestas;
 
 
     public Member() {
     }
 
-    public Integer getHeight() {
-        return Height;
+    public Integer getPesoMama() {
+        return PesoMama;
     }
 
-    public void setHeight(Integer height) {
-        Height = height;
+    public void setPesoMama(Integer pesoMama) {
+        PesoMama = pesoMama;
     }
 
-    public Integer getWeight() {
-        return Weight;
+    public Integer getSemanas() {
+        return Semanas;
     }
 
-    public void setWeight(Integer weight) {
-        Weight = weight;
+    public void setSemanas(Integer semanas) {
+        Semanas = semanas;
     }
 
-    public Integer getWeeks() {
-        return Weeks;
+    public String getIniciales() {
+        return Iniciales;
     }
 
-    public void setWeeks(Integer weeks) {
-        Weeks = weeks;
+    public void setIniciales(String iniciales) {
+        Iniciales = iniciales;
     }
 
-    public String getName() {
-        return Name;
+    public Integer getEdad() {
+        return Edad;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public Integer getAge() {
-        return Age;
-    }
-
-    public void setAge(Integer age) {
-        Age = age;
+    public void setEdad(Integer edad) {
+        Edad = edad;
     }
 
     public Integer getTime() {
@@ -58,5 +56,61 @@ public class Member {
 
     public void setTime(Integer time) {
         Time = time;
+    }
+
+    public Integer getFcEnt() {
+        return FcEnt;
+    }
+
+    public void setFcEnt(Integer fcEnt) {
+        FcEnt = fcEnt;
+    }
+
+    public Integer getFcSal() {
+        return FcSal;
+    }
+
+    public void setFcSal(Integer fcSal) {
+        FcSal = fcSal;
+    }
+
+    public Integer getPaEnt() {
+        return PaEnt;
+    }
+
+    public void setPaEnt(Integer paEnt) {
+        PaEnt = paEnt;
+    }
+
+    public Integer getPaSal() {
+        return PaSal;
+    }
+
+    public void setPaSal(Integer paSal) {
+        PaSal = paSal;
+    }
+
+    public Integer getPesoBebe() {
+        return PesoBebe;
+    }
+
+    public void setPesoBebe(Integer pesoBebe) {
+        PesoBebe = pesoBebe;
+    }
+
+    public Integer getTalla() {
+        return Talla;
+    }
+
+    public void setTalla(Integer talla) {
+        Talla = talla;
+    }
+
+    public Integer getGestas() {
+        return Gestas;
+    }
+
+    public void setGestas(Integer gestas) {
+        Gestas = gestas;
     }
 }
