@@ -11,10 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GradoModerado">
+        <activity
+            android:name=".GradoModerado"
+            android:parentActivityName=".PerdidaActivity"
+            android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".GradoCompesado" />
+        <activity
+            android:name=".GradoCompesado"
+            android:parentActivityName=".PerdidaActivity"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".SplashActivity"
@@ -36,17 +43,14 @@
         <activity
             android:name=".Hora"
             android:label="HORA DORADA"
-            android:parentActivityName=".PerdidaActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".PerdidaActivity"
-            android:label="Evaluacion del paciente"
-            android:parentActivityName=".MenuActivity"
+            android:label="Historia perinatológica"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Patientdata"
             android:label="Informacion del Paciente"
-            android:parentActivityName=".Hora"
             android:screenOrientation="portrait" />
 
         <activity

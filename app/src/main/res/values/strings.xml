@@ -9,6 +9,7 @@
     <string name="presion_arterial">Presion Arterial </string>
     <string name="presion_arterial1">Presion Arterial sistolica \n (mm/Hg)</string>
     <string name="grados_de_choque">Grados de Choque</string>
+
     <string name="tab_1">Perdida</string>
     <string name="tab_2">Sensorio</string>
     <string name="tab_3">Perfusión</string>
@@ -25,11 +26,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="diagnostico">Diagnostico de Choque Hipovolemico</string>
     <string name="perdida_de_volumen">Perdida de Volumen (%)</string>
+    <string name="perdida_de_volumen1"><b>Perdida de Volumen (%):</b> \n\n 10-15 %</string>
+    <string name="perdida_de_volumen2"><b>Perdida de Volumen (%):</b> \n\n 16-25 %</string>
     <string name="no">NO</string>
     <string name="si">SI</string>
     <string name="caso_a_evaluar">Caso a Evaluar</string>
     <string name="perdidas_mayores">perdidas mayores al 35%</string>
-    <string name="ml_para_mujeres">ml para mujeres entre 50-70 kg</string>
+    <string name="ml_para_mujeres"><b>ml para mujeres entre 50-70 kg:</b> \n\n 500-1000 mL</string>
+    <string name="ml_para_mujeres1"><b>ml para mujeres entre 50-70 kg:</b> \n\n 1000-1500 mL</string>
     <string name="mayores_a_2000_ml">Mayores a 2000 mL</string>
     <string name="title_activity_codigo">CodigoActivity</string>
     <string name="menor_70"><![CDATA[<70]]></string>
@@ -48,7 +52,7 @@
     <string name="name">Nombre</string>
 
     <string name="perfusion_caso_rojo"><![CDATA[Palidez \n Frialdad \n Sudoracion \n Llenado capilar > 3 seg]]></string>
-    <string name="bienvenida">Esta aplicación es un sistema destinado al aprendizaje basado en simulación para el manejo de hemorragia obstétrica. No debe utilizarse durante emergencias médicas.</string>
+    <string name="bienvenida">Esta aplicación es un sistema destinado al aprendizaje basado en simulación para el manejo de hemorragia obstétrica. \n\n <B>No debe utilizarse durante emergencias médicas.</B></string>
     <string name="letargica_o_inconsciente">Letargica o \n Inconsciente</string>
 
     <string name="lista0_1"><b>• Utero:</b> \n\n\t\t\t\t\t\t\t\t - PIDE AYUDA  \n\t\t\t\t\t\t\t\t  - Asigne roles \n\t\t\t\t\t\t\t\t - Masaje uterino permanente</string>
@@ -84,7 +88,7 @@
 
     <string name="list_tann"><b>• Criterios de aplicacion:</b> \n\n\t\t\t\t\t\t\t\t- Índice de choque > 0.9 \n\n\t\t\t\t\t\t\t\t-Inestabilidad hemodinámica \n\n\t\t\t\t\t\t\t\t-Sangrado > 20 minutos</string>
     <string name="list_tann1"><b>• Colocación: </b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento 5</string>
-    <string name="list_tann2"><b>• Criterios de retiro:</b>\n\n- Si la presión arterial baja 20mm/hg o el pulso aumenta en 20 latidos/minuto después de retirar un segmento cerrar nuevamente todos los segmentos aumentar la tasa de fluidos y buscar el origen del sangrado</string>
+    <string name="list_tann2"><b>• Criterios de retiro:</b>\n\nSi la presión arterial baja 20mm/hg o el pulso aumenta en 20 latidos/minuto después de retirar un segmento cerrar nuevamente todos los segmentos aumentar la tasa de fluidos y buscar el origen del sangrado</string>
     <string name="list_tann3"><b>• Retiro:</b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento \n\n\t\t\t\t\t\t\t\t- Esperar 15 minutos por segmento</string>
     <string name="list_bakri">• Balon de Bakri: \n\n\t\t\t\t\t\t\t\t- Volumen 500cc \n\n\t\t\t\t\t\t\t\t- Usar llave de tres vías</string>
     <string name="list_artesanal">• Balon de artesanal: \n\n\t\t\t\t\t\t\t\t- Condón \n\n\t\t\t\t\t\t\t\t- Sonda de Foley \n\n\t\t\t\t\t\t\t\t- Nelaton 18/20/22</string>
@@ -104,6 +108,9 @@
     <string name="_120"><![CDATA[> 120]]></string>
     <string name="_90"><![CDATA[> 90]]></string>
     <string name="_80_90">80-90</string>
+
+
+    <string name="primer_mensaje">Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.</string>
 
 
 </resources>

@@ -20,4 +20,11 @@ public class GradoModerado extends AppCompatActivity {
         Intent intent = new Intent(this, PerdidaActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "Use los botones de la Aplicacion", Toast.LENGTH_SHORT).show();
+
+    }
 }

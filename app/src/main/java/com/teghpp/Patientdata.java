@@ -2,7 +2,6 @@ package com.teghpp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,11 +15,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Patientdata extends AppCompatActivity {
     EditText txtName, txtAge, txtTime, txtWt, txtWeek, txtPaEnt, txtPaSal, txtFcEnt, txtFcSal, txtTalla, txtPeso, txtGestas;
@@ -40,7 +36,7 @@ public class Patientdata extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patientdata);
 
-        a = (TextView) findViewById(R.id.txtGro);
+        //a = (TextView) findViewById(R.id.txtGro);
         txtName = (EditText) findViewById(R.id.txtName);
         txtAge = (EditText) findViewById(R.id.txtAge);
         txtWt = (EditText) findViewById(R.id.txtWt);
@@ -53,11 +49,11 @@ public class Patientdata extends AppCompatActivity {
         txtGestas = (EditText) findViewById(R.id.txtGestas);
         txtWeek = (EditText) findViewById(R.id.txtWeek);
         btnsave = (Button) findViewById(R.id.btnsave);
-        btntest = (Button) findViewById(R.id.btntest);
+        // btntest = (Button) findViewById(R.id.btntest);
         member = new Member();
         reff = FirebaseDatabase.getInstance().getReference().child("Member");
 
-        btntest.setOnClickListener(new View.OnClickListener() {
+        /** btntest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showToast("Button");
@@ -78,7 +74,7 @@ public class Patientdata extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
         btnsave.setOnClickListener(new View.OnClickListener() {
 
@@ -223,6 +219,10 @@ public class Patientdata extends AppCompatActivity {
         }
         return true;
     }
+
+    /**  @Override public void onBackPressed() {
+
+    }*/
 
 
 }

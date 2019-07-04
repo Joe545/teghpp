@@ -20,11 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void goToMenu(View view) {
+        switch (view.getId()) {
+            case R.id.button:
+                startActivity(new Intent(this, Registro.class));
+                break;
 
-        Toast.makeText(this, "Entro en menu principal", Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(this, Registro.class);
-        startActivity(intent);
+            case R.id.button1:
+                startActivity(new Intent(this, Login.class));
+                break;
+        }
     }
 
 

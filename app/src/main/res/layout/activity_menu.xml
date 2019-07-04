@@ -50,13 +50,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
                 <!-- 1 -->
-
-
-                <!-- 2 -->
-
-
-                <!-- 3 -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/sensorio"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
@@ -88,6 +83,7 @@
 
                 <!-- 4 -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/perfusion"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
@@ -119,6 +115,7 @@
 
                 <!-- 5 -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/pulso"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
@@ -149,6 +146,7 @@
 
                 <!-- 6 -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/presion"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"

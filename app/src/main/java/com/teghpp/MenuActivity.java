@@ -2,6 +2,7 @@ package com.teghpp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MenuActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MenuActivity.class.getSimpleName() ;
-
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,38 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent (this, PerdidaActivity.class);
         startActivity (intent);
             }
+
+
+    /**
+     * public void launchPerdidaActivity(View view) {
+     * switch (view.getId()) {
+     * case R.id.sensorio:
+     * viewPager.setCurrentItem(getItem(+0), true);
+     * <p>
+     * startActivity(new Intent(this, PerdidaActivity.class));
+     * break;
+     * <p>
+     * case R.id.perfusion:
+     * viewPager.setCurrentItem(getItem(+1), true);
+     * <p>
+     * startActivity(new Intent(this, PerdidaActivity.class));
+     * <p>
+     * break;
+     * <p>
+     * case R.id.pulso:
+     * viewPager.setCurrentItem(getItem(+2), true);
+     * <p>
+     * startActivity(new Intent(this, PerdidaActivity.class));
+     * break;
+     * <p>
+     * case R.id.presion:
+     * viewPager.setCurrentItem(getItem(+3), true);
+     * <p>
+     * startActivity(new Intent(this, PerdidaActivity.class));
+     * break;
+     * }
+     * }
+     */
 
 
     @Override

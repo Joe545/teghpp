@@ -27,14 +27,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class PerdidaActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    int count = 0;
 
-    private int[] tabIcons = {
-            R.drawable.brain,
-            R.drawable.nail,
-            R.drawable.pulse,
-            R.drawable.pressure,
-
-    };
 
 
     @Override
@@ -137,10 +131,22 @@ public class PerdidaActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-        /**   String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        /**  String messageToSend = getString(R.string.primer_mensaje);
         String number = "4241678931";
+         String number1 = "4241959187"; //Pirrone
+         String number2 = "4123197467";//Djumovic
+         String number3 = "4141070767";
         SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
-         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show(); */
+         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
+
+         SmsManager.getDefault().sendTextMessage(number1, null, messageToSend, null, null);
+         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
+
+         SmsManager.getDefault().sendTextMessage(number2, null, messageToSend, null, null);
+         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
+
+         SmsManager.getDefault().sendTextMessage(number3, null, messageToSend, null, null);
+         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();*/
     }
 
     //muestra alerta para entrar en codigo rojo
@@ -156,12 +162,7 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
-
-
                 launchCasoRojo(view);
-
-
-
             }
         });
 
@@ -182,22 +183,12 @@ public class PerdidaActivity extends AppCompatActivity {
     //menu de logout para la activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
 
-    /**
-     * public void nextFragment (View view) {
-     * Toast.makeText(this, "Paso al siguiente caso a Evaluar", Toast.LENGTH_SHORT).show();
-     * <p>
-     * viewPager.setCurrentItem(getItem(+1), true);
-     * <p>
-     * <p>
-     * <p>
-     * }
-     */
+
 
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
@@ -225,37 +216,57 @@ public class PerdidaActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btAmarillo1:
                 viewPager.setCurrentItem(getItem(+1), true);
-
+                count = count + 100;
+                count++;
                 break;
 
             case R.id.btAmarillo2:
                 viewPager.setCurrentItem(getItem(+1), true);
+                count = count + 100;
+                count++;
                 break;
 
             case R.id.btAmarillo3:
                 viewPager.setCurrentItem(getItem(+1), true);
+                count = count + 100;
+                count++;
                 break;
 
             case R.id.btAmarillo4:
-                finish();
+                count = count + 100;
                 startActivity(new Intent(this, GradoModerado.class));
+
+
+                //viewPager.setCurrentItem(getItem(-3), true);
                 break;
 
             case R.id.btVerde1:
                 viewPager.setCurrentItem(getItem(+1), true);
+                count = count + 1;
+                count++;
                 break;
 
             case R.id.btVerde2:
                 viewPager.setCurrentItem(getItem(+1), true);
+                count = count++;
                 break;
 
             case R.id.btVerde3:
                 viewPager.setCurrentItem(getItem(+1), true);
+                count = count + 1;
+                count++;
                 break;
 
             case R.id.btVerde4:
-                finish();
-                startActivity(new Intent(this, GradoCompesado.class));
+                count = count + 1;
+                if (count < 100) {
+
+                    startActivity(new Intent(this, GradoCompesado.class));
+                } else {
+                    startActivity(new Intent(this, GradoModerado.class));
+
+                }
+                //viewPager.setCurrentItem(getItem(-3), true);
                 break;
         }
     }

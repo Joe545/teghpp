@@ -1,14 +1,18 @@
 package com.teghpp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -65,6 +69,12 @@ public class Hora extends AppCompatActivity {
 
     }
 
+    public void startChrono(View view) {
+        final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+        chronometer.start();
+    }
+
+
 
     public class PagerAdapter extends FragmentStatePagerAdapter {
         int mNumOfTabs;
@@ -97,11 +107,44 @@ public class Hora extends AppCompatActivity {
     }
 
 
+    public void finalAlert(final View view) {
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(Hora.this);
+        // Set the dialog title.
+        myAlertBuilder.setTitle("ALERTA");
+        // Set the dialog message.
+        myAlertBuilder.setMessage("Está por finalizar el caso y se procedera a llenar la Historia Perinatológica. ¿Esta seguro de finalizar?");
 
+        // Add the buttons.
+        myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // User clicked OK button.
+                final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+                chronometer.stop();
+                launchPatient(view);
+            }
+        });
+
+        myAlertBuilder.setNegativeButton(R.string.Cancel, new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User cancelled the dialog.
+                        Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        // Create and show the AlertDialog.
+        myAlertBuilder.show();
+    }
 
 
     public void launchPatient(View view) {
-        Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
+        final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+        chronometer.setBase(SystemClock.elapsedRealtime());
+
+
+        Toast.makeText(this, "Finalizo el caso", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Patientdata.class);
         startActivity(intent);
 
