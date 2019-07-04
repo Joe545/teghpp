@@ -14,6 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -131,11 +132,11 @@ public class PerdidaActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-        /**  String messageToSend = getString(R.string.primer_mensaje);
-        String number = "4241678931";
-         String number1 = "4241959187"; //Pirrone
-         String number2 = "4123197467";//Djumovic
-         String number3 = "4141070767";
+        String messageToSend = getString(R.string.primer_mensaje);
+        String number = "4142747612";
+        String number1 = "4122280235"; //Pirrone
+        String number2 = "4147233905";//Djumovic
+        String number3 = "4265204260";
         SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
          Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
 
@@ -146,7 +147,7 @@ public class PerdidaActivity extends AppCompatActivity {
          Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
 
          SmsManager.getDefault().sendTextMessage(number3, null, messageToSend, null, null);
-         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();*/
+        Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
 
     //muestra alerta para entrar en codigo rojo

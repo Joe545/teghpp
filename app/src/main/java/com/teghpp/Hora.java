@@ -21,11 +21,22 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Hora extends AppCompatActivity {
     FirebaseAuth mAuth;
 
+    /**
+     * public abstract class CountDownTimer extends Object{
+     * public CountDownTimer(long millisInFuture, long countDownInterval) {
+     * }
+     * <p>
+     * public final CountDownTimer start() {
+     * return android.os.CountDownTimer
+     * }
+     * }
+     */
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hora);
-
 
         // Create an instance of the tab layout from the view.
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
@@ -72,6 +83,16 @@ public class Hora extends AppCompatActivity {
     public void startChrono(View view) {
         final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
         chronometer.start();
+        /**  new CountDownTimer(30000 /*For how long should timer run, 1000 *time interval after which `onTick()` should be called) {
+
+         public void onTick(long millisUntilFinished) {
+         Log.i("Countdown Timer: ","seconds remaining: " + millisUntilFinished / 1000);
+         }
+
+         public void onFinish() {
+         //Done timer time out.
+         }
+         }.start();*/
     }
 
 
@@ -152,10 +173,10 @@ public class Hora extends AppCompatActivity {
     }
 
 
-    /**  @Override
+    @Override
     public void onBackPressed() {
 
-    }*/
+    }
 
 
 }

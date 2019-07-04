@@ -220,9 +220,16 @@ public class Patientdata extends AppCompatActivity {
         return true;
     }
 
-    /**  @Override public void onBackPressed() {
+    @Override
+    public void onBackPressed() {
 
-    }*/
+    }
 
 
+    public void goToInicio(View view) {
+
+        Toast.makeText(this, "Pantalla principal", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

@@ -16,7 +16,7 @@
         android:textColor="@color/blanco"
         android:textSize="45sp"
         android:textStyle="bold"
-
+        android:onClick="startChrono"
         android:textAlignment="center"
         android:foregroundGravity="center"
         android:backgroundTint="@color/rojo"
