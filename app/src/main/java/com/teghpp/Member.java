@@ -3,7 +3,7 @@ package com.teghpp;
 public class Member {
     private String Iniciales;
     private Integer Edad;
-    private Integer Time;
+    private Long Time;
     private Integer PesoMama;
     private Integer Semanas;
     private Integer FcEnt;
@@ -50,11 +50,11 @@ public class Member {
         Edad = edad;
     }
 
-    public Integer getTime() {
+    public Long getTime() {
         return Time;
     }
 
-    public void setTime(Integer time) {
+    public void setTime(Long time) {
         Time = time;
     }
 

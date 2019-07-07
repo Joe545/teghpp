@@ -19,7 +19,7 @@
         android:backgroundTint="@color/rojo"
         android:text="@string/pida_ayuda"
         android:textColor="@color/blanco"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

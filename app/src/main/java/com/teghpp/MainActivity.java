@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        mAuth = FirebaseAuth.getInstance();
     }
+
 
 
     public void goToMenu(View view) {
@@ -26,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.button1:
-                startActivity(new Intent(this, Login.class));
+                if (mAuth.getCurrentUser() != null) {
+                    finish();
+                    startActivity(new Intent(this, MenuActivity.class));
+                } else {
+                    startActivity(new Intent(this, Login.class));
+                }
+
                 break;
         }
     }

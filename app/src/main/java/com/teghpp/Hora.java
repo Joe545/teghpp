@@ -11,15 +11,21 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Hora extends AppCompatActivity {
     FirebaseAuth mAuth;
+    long tiempo;
+    DatabaseReference reff, reff1;
+    Member member;
 
     /**
      * public abstract class CountDownTimer extends Object{
@@ -37,6 +43,9 @@ public class Hora extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hora);
+
+        final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+        chronometer.start();
 
         // Create an instance of the tab layout from the view.
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
@@ -77,12 +86,18 @@ public class Hora extends AppCompatActivity {
             }
         });
 
-
+        member = new Member();
+        reff = FirebaseDatabase.getInstance().getReference().child("Member");
     }
 
     public void startChrono(View view) {
         final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
         chronometer.start();
+
+        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        String number = "4241678931";
+        SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+        Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
         /**  new CountDownTimer(30000 /*For how long should timer run, 1000 *time interval after which `onTick()` should be called) {
 
          public void onTick(long millisUntilFinished) {
@@ -142,6 +157,9 @@ public class Hora extends AppCompatActivity {
                 // User clicked OK button.
                 final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
                 chronometer.stop();
+                long elapsedMills = SystemClock.elapsedRealtime() - chronometer.getBase();
+                tiempo = elapsedMills;
+
                 launchPatient(view);
             }
         });
@@ -162,6 +180,9 @@ public class Hora extends AppCompatActivity {
 
     public void launchPatient(View view) {
         final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+
+        member.setTime(tiempo);
+        reff.push().setValue(member);
         chronometer.setBase(SystemClock.elapsedRealtime());
 
 

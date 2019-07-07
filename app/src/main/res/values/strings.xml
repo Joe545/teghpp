@@ -98,7 +98,7 @@
 
     <string name="list_caso3">• Subtotal, conservación de anexos</string>
     <string name="list_caso3_1">• A criterios del médico</string>
-    <string name="pida_ayuda">PIDA AYUDA</string>
+    <string name="pida_ayuda">PULSE AQUI PARA SOLICITAR AYUDA</string>
     <string name="registrate">Registrate</string>
     <string name="compensado">Compensado</string>
     <string name="seguir_evaluando_al_paciente">Seguir evaluando al paciente</string>
@@ -110,7 +110,10 @@
     <string name="_80_90">80-90</string>
 
 
-    <string name="primer_mensaje">Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.</string>
+    <string name="primer_mensaje">Emergencia, entro en Código Rojo, acudir inmediatamente a la sala de urgencia.</string>
+    <string name="alerta_final">Está por finalizar el caso. \n¿Ya completóo la historia perinatológica?. \n¿Está seguro de ir a la pantalla principal?</string>
+
+    <string name="realizado">Realizado por:\n<b>Gioia Giovanni \nOjeda Joel</b></string>
 
 
 </resources>

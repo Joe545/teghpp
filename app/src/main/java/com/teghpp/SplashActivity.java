@@ -1,31 +1,33 @@
 package com.teghpp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
+import android.os.Handler;
 
 
-public class SplashActivity extends AppCompatActivity {
-    FirebaseAuth mAuth;
+public class SplashActivity extends Activity {
+
+    // Duración en milisegundos que se mostrará el splash
+    private final int DURACION_SPLASH = 3000; // 3 segundos
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
 
+        // Tenemos una plantilla llamada splash.xml donde mostraremos la información que queramos (logotipo, etc.)
+        setContentView(R.layout.splash);
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (mAuth.getCurrentUser() != null) {
-            finish();
-            startActivity(new Intent(this, MenuActivity.class));
-        } else {
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
-        }
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicación
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+            ;
+        }, DURACION_SPLASH);
     }
 }
+

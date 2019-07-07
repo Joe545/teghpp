@@ -26,18 +26,19 @@
             android:name=".MainActivity"
             android:parentActivityName=".SplashActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
 
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -46,11 +47,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".PerdidaActivity"
-            android:label="Historia perinatológica"
+            android:label="Evaluación del paciente"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Patientdata"
-            android:label="Informacion del Paciente"
+            android:label="Historia perinatológica"
             android:screenOrientation="portrait" />
 
         <activity

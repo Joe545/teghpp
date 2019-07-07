@@ -30,6 +30,13 @@ public class PerdidaActivity extends AppCompatActivity {
     private ViewPager viewPager;
     int count = 0;
 
+    private int[] tabIcons = {
+            R.drawable.brain,
+            R.drawable.nail,
+            R.drawable.pulse,
+            R.drawable.pressure,
+
+    };
 
 
     @Override
@@ -38,9 +45,9 @@ public class PerdidaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perdida);
 
 
-        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = findViewById(R.id.pager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout = findViewById(R.id.tab_layout);
 // Set the text for each tab.
 
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.brain));
@@ -61,7 +68,7 @@ public class PerdidaActivity extends AppCompatActivity {
 
 // Each page is represented by its own fragment.
 // This is another example of the adapter pattern.
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final ViewPager viewPager = findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -132,21 +139,9 @@ public class PerdidaActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-        String messageToSend = getString(R.string.primer_mensaje);
-        String number = "4142747612";
-        String number1 = "4122280235"; //Pirrone
-        String number2 = "4147233905";//Djumovic
-        String number3 = "4265204260";
+        String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
+        String number = "4241678931";
         SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
-         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
-
-         SmsManager.getDefault().sendTextMessage(number1, null, messageToSend, null, null);
-         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
-
-         SmsManager.getDefault().sendTextMessage(number2, null, messageToSend, null, null);
-         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
-
-         SmsManager.getDefault().sendTextMessage(number3, null, messageToSend, null, null);
         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
     }
 
@@ -163,7 +158,11 @@ public class PerdidaActivity extends AppCompatActivity {
         myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 // User clicked OK button.
+
+
                 launchCasoRojo(view);
+
+
             }
         });
 
@@ -184,12 +183,22 @@ public class PerdidaActivity extends AppCompatActivity {
     //menu de logout para la activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
 
-
+    /**
+     * public void nextFragment (View view) {
+     * Toast.makeText(this, "Paso al siguiente caso a Evaluar", Toast.LENGTH_SHORT).show();
+     * <p>
+     * viewPager.setCurrentItem(getItem(+1), true);
+     * <p>
+     * <p>
+     * <p>
+     * }
+     */
 
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
@@ -282,6 +291,4 @@ public class PerdidaActivity extends AppCompatActivity {
             Log.i("Mensaje", "Se tiene permiso para enviar SMS!");
         }
     }
-
-
 }

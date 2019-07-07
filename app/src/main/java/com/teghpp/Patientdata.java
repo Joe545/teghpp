@@ -1,7 +1,9 @@
 package com.teghpp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -226,6 +228,35 @@ public class Patientdata extends AppCompatActivity {
     }
 
 
+    public void AlertInicio(final View view) {
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(Patientdata.this);
+        // Set the dialog title.
+        myAlertBuilder.setTitle("ALERTA");
+        // Set the dialog message.
+        myAlertBuilder.setMessage(R.string.alerta_final);
+
+        // Add the buttons.
+        myAlertBuilder.setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // User clicked OK button.
+
+                goToInicio(view);
+            }
+        });
+
+        myAlertBuilder.setNegativeButton(R.string.Cancel, new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User cancelled the dialog.
+                        Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        // Create and show the AlertDialog.
+        myAlertBuilder.show();
+    }
     public void goToInicio(View view) {
 
         Toast.makeText(this, "Pantalla principal", Toast.LENGTH_SHORT).show();
