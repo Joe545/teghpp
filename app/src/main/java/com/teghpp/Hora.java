@@ -17,15 +17,11 @@ import android.widget.Chronometer;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Hora extends AppCompatActivity {
     FirebaseAuth mAuth;
-    long tiempo;
-    DatabaseReference reff, reff1;
-    Member member;
+
 
     /**
      * public abstract class CountDownTimer extends Object{
@@ -86,13 +82,11 @@ public class Hora extends AppCompatActivity {
             }
         });
 
-        member = new Member();
-        reff = FirebaseDatabase.getInstance().getReference().child("Member");
+
     }
 
     public void startChrono(View view) {
-        final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
-        chronometer.start();
+
 
         String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
         String number = "4241678931";
@@ -157,9 +151,6 @@ public class Hora extends AppCompatActivity {
                 // User clicked OK button.
                 final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
                 chronometer.stop();
-                long elapsedMills = SystemClock.elapsedRealtime() - chronometer.getBase();
-                tiempo = elapsedMills;
-
                 launchPatient(view);
             }
         });
@@ -180,9 +171,6 @@ public class Hora extends AppCompatActivity {
 
     public void launchPatient(View view) {
         final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
-
-        member.setTime(tiempo);
-        reff.push().setValue(member);
         chronometer.setBase(SystemClock.elapsedRealtime());
 
 
