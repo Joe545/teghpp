@@ -128,7 +128,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-
+        </ScrollView>
 
         <Button
             android:id="@+id/btnsave"
@@ -137,7 +137,7 @@
             android:backgroundTint="@color/rojo"
             android:text="Guardar"
             android:textColor="@color/blanco" />
-        </ScrollView>
+
     </LinearLayout>
 
     <Button

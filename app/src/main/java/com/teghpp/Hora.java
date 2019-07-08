@@ -3,7 +3,6 @@ package com.teghpp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -92,16 +91,7 @@ public class Hora extends AppCompatActivity {
         String number = "4241678931";
         SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
         Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
-        /**  new CountDownTimer(30000 /*For how long should timer run, 1000 *time interval after which `onTick()` should be called) {
 
-         public void onTick(long millisUntilFinished) {
-         Log.i("Countdown Timer: ","seconds remaining: " + millisUntilFinished / 1000);
-         }
-
-         public void onFinish() {
-         //Done timer time out.
-         }
-         }.start();*/
     }
 
 
@@ -170,13 +160,12 @@ public class Hora extends AppCompatActivity {
 
 
     public void launchPatient(View view) {
-        final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
-        chronometer.setBase(SystemClock.elapsedRealtime());
+        //final Chronometer chronometer = (Chronometer) findViewById(R.id.chronometerExample);
+        // chronometer.setBase(SystemClock.elapsedRealtime());
 
 
         Toast.makeText(this, "Finalizo el caso", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Patientdata.class);
-        startActivity(intent);
+        startActivity(new Intent(this, Patientdata.class));
 
 
     }

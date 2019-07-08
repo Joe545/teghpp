@@ -56,26 +56,23 @@ public class Patientdata extends AppCompatActivity {
         reff = FirebaseDatabase.getInstance().getReference().child("Member");
 
         /** btntest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showToast("Button");
-                reff1 = FirebaseDatabase.getInstance().getReference().child("Member");
-                reff1.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String group = dataSnapshot.child("group").getValue().toString();
-                        a.setText(group);
-                    }
+        @Override public void onClick(View v) {
+        showToast("Button");
+        reff1 = FirebaseDatabase.getInstance().getReference().child("Member");
+        reff1.addValueEventListener(new ValueEventListener() {
+        @Override public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        String group = dataSnapshot.child("group").getValue().toString();
+        a.setText(group);
+        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        System.out.println("Fallo en la lectura");
+        @Override public void onCancelled(@NonNull DatabaseError databaseError) {
+        System.out.println("Fallo en la lectura");
 
-                    }
-                });
+        }
+        });
 
 
-            }
+        }
         });*/
 
         btnsave.setOnClickListener(new View.OnClickListener() {

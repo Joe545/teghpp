@@ -1,21 +1,16 @@
 package com.teghpp;
 
-import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -189,16 +184,6 @@ public class PerdidaActivity extends AppCompatActivity {
         return true;
     }
 
-    /**
-     * public void nextFragment (View view) {
-     * Toast.makeText(this, "Paso al siguiente caso a Evaluar", Toast.LENGTH_SHORT).show();
-     * <p>
-     * viewPager.setCurrentItem(getItem(+1), true);
-     * <p>
-     * <p>
-     * <p>
-     * }
-     */
 
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
@@ -281,14 +266,5 @@ public class PerdidaActivity extends AppCompatActivity {
         }
     }
 
-    public void checkSMSStatePermission() {
-        int permissionCheck = ContextCompat.checkSelfPermission(
-                this, Manifest.permission.SEND_SMS);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            Log.i("Mensaje", "No se tiene permiso para enviar SMS.");
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, 225);
-        } else {
-            Log.i("Mensaje", "Se tiene permiso para enviar SMS!");
-        }
-    }
+
 }
