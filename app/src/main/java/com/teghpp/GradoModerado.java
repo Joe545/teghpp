@@ -15,7 +15,6 @@ public class GradoModerado extends AppCompatActivity {
     }
 
     public void returnCaso1(View view) {
-        Toast.makeText(this, "Entro en Código rojo", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, PerdidaActivity.class);
         startActivity(intent);
