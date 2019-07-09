@@ -89,7 +89,7 @@
     <string name="list_tann"><b>• Criterios de aplicacion:</b> \n\n\t\t\t\t\t\t\t\t- Índice de choque > 0.9 \n\n\t\t\t\t\t\t\t\t-Inestabilidad hemodinámica \n\n\t\t\t\t\t\t\t\t-Sangrado > 20 minutos</string>
     <string name="list_tann1"><b>• Colocación: </b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento 5</string>
     <string name="list_tann2"><b>• Criterios de retiro:</b>\n\nSi la presión arterial baja 20mm/hg o el pulso aumenta en 20 latidos/minuto después de retirar un segmento cerrar nuevamente todos los segmentos aumentar la tasa de fluidos y buscar el origen del sangrado</string>
-    <string name="list_tann3"><b>• Retiro:</b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento \n\n\t\t\t\t\t\t\t\t- Esperar 15 minutos por segmento</string>
+    <string name="list_tann3"><b>• Retiro:</b> \n\n\t\t\t\t\t\t\t\t- Iniciar segmento 1 a segmento 5 \n\n\t\t\t\t\t\t\t\t-Esperar 15 minutos por segmento</string>
     <string name="list_bakri">• Balon de Bakri: \n\n\t\t\t\t\t\t\t\t- Volumen 500cc \n\n\t\t\t\t\t\t\t\t- Usar llave de tres vías</string>
     <string name="list_artesanal">• Balon de artesanal: \n\n\t\t\t\t\t\t\t\t- Condón \n\n\t\t\t\t\t\t\t\t- Sonda de Foley \n\n\t\t\t\t\t\t\t\t- Nelaton 18/20/22</string>
     <string name="list_sutura1">• Catgut crómico 2</string>

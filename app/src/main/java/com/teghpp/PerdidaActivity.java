@@ -1,9 +1,12 @@
 package com.teghpp;
 
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -21,6 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class PerdidaActivity extends AppCompatActivity {
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
+
     private TabLayout tabLayout;
     private ViewPager viewPager;
     int count = 0;
@@ -136,9 +141,17 @@ public class PerdidaActivity extends AppCompatActivity {
 
         String messageToSend = "Emergencia, entro en Codigo Rojo, acudir inmediatamente a la sala de urgencia.";
         String number = "4241678931";
-        SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
-        Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, MY_PERMISSIONS_REQUEST_SEND_SMS);
+        } else {
+
+            SmsManager.getDefault().sendTextMessage(number, null, messageToSend, null, null);
+            Toast.makeText(this, "Se envio el mesaje", Toast.LENGTH_SHORT).show();
+
+        }
     }
+
 
     //muestra alerta para entrar en codigo rojo
     public void onClickShowAlert(final View view) {
@@ -266,5 +279,12 @@ public class PerdidaActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "entre en Perdida", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
 
 }

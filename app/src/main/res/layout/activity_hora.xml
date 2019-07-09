@@ -47,7 +47,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="80dp"
         android:onClick="finalAlert"
-        android:src="@drawable/carpeta"
+        android:src="@drawable/lista1"
         app:maxImageSize="35dp"
         android:background="@color/blanco"
         app:backgroundTint="@color/blanco"
